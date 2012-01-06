@@ -4,7 +4,7 @@ Environment is a set of scripts to get Max OS X set up as a development machine 
 
 == Prerequisites
 
-XCode or [GCC for OS X](https://github.com/kennethreitz/osx-gcc-installer). (requires OS X 10.6 or higher)
+XCode or GCC for OS X (https://github.com/kennethreitz/osx-gcc-installer). (requires OS X 10.6 or higher)
 
 == Installation
 
@@ -22,3 +22,6 @@ XCode or [GCC for OS X](https://github.com/kennethreitz/osx-gcc-installer). (req
 * dotfiles (https://github.com/damonmorgan/dotfiles - my preferred configuration)
 * the Inconsolata font (a nice development font - http://www.levien.com/type/myfonts/inconsolata.html)
 * the Solarized colour scheme (a nice development scheme - http://ethanschoonover.com/solarized)
+* sqlite (for database development)
+* mysql (for database development)
+* rbenv (for Ruby version management - https://github.com/sstephenson/rbenv)

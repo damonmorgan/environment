@@ -52,3 +52,18 @@ echo "Install snippets"
 
 echo "Get better colour scheme for terminal"
   git clone git://github.com/altercation/solarized.git
+
+echo "Install Databases (sqlite, mysql)"
+  brew install sqlite
+  brew install mysql
+  read -p "Run the scripts indicated to complete installation of mysql and then press any key to continue..."
+
+echo "Install rbenv (a Ruby version manager)"
+  brew install rbenv
+  brew install ruby-build
+  rbenv init -
+
+echo "Install ruby ree 1.8.7 and ruby 1.9.2"
+  rbenv install ree-1.8.7-2011.03
+  rbenv install 1.9.2-p290
+  rbenv rehash
