@@ -25,3 +25,9 @@ XCode or GCC for OS X (https://github.com/kennethreitz/osx-gcc-installer). (requ
 * sqlite (for database development)
 * mysql (for database development)
 * rbenv (for Ruby version management - https://github.com/sstephenson/rbenv)
+
+== Post Install
+
+* gitx (http://gitx.laullon.com/)
+* iterm2 (http://www.iterm2.com/ - change profile preferences to Inconsolata 14pt and Solarized Dark)
+* Sequel Pro (http://www.sequelpro.com/)
