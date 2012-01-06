@@ -4,7 +4,7 @@ Environment is a set of scripts to get Max OS X set up as a development machine 
 
 == Prerequisites
 
-  XCode or [GCC for OS X](https://github.com/kennethreitz/osx-gcc-installer). (requires OS X 10.6 or higher)
+XCode or [GCC for OS X](https://github.com/kennethreitz/osx-gcc-installer). (requires OS X 10.6 or higher)
 
 == Installation
 
