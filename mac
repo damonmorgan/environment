@@ -1,0 +1,54 @@
+#!/usr/bin/env bash
+
+echo "Checking for SSH key, generating one if it doesn't exist ..."
+  [[ -f ~/.ssh/id_rsa.pub ]] || ssh-keygen -t rsa
+
+echo "Copying public key to clipboard. Paste it into your Github account ..."
+  [[ -f ~/.ssh/id_rsa.pub ]] && cat ~/.ssh/id_rsa.pub | pbcopy
+  open https://github.com/account/ssh
+  read -p "Press any key once you have pasted into your Github account..."
+
+echo "Installing Homebrew, a good OS X package manager ..."
+  /usr/bin/ruby -e "$(curl -fsSL https://raw.github.com/gist/323731)"
+  brew update
+
+echo "Installing Packages (git, bash-completion, macvim, ack, wget)"
+  brew install git
+  brew install bash-completion
+  brew install macvim
+  brew install ack
+  brew install wget
+
+echo "Fetch dotfiles"
+  git clone git@github.com:damonmorgan/dotfiles.git ~/.dotfiles
+
+echo "Install dotfiles"
+  cd ~/.dotfiles
+  git submodule update --init
+  rake install
+
+echo "Fetch better programming font"
+  wget http://www.levien.com/type/myfonts/Inconsolata.otf
+  read -p "Press any key once you have installed the Inconsolata font..."
+
+echo "Launching MacVim"
+  mvim .
+  read -p "Press any key once you have run :BundleInstall inside of MacVim..."
+
+echo "Building Command-T plugin"
+  cd ~/.dotfiles/vim/bundle/command-t
+  rake make
+
+echo "Create development directory"
+  cd ~/
+  mkdir development
+  cd ~/development
+
+echo "Install snippets"
+  git clone git://github.com/scrooloose/snipmate-snippets.git
+  cd ~/development/snipmate-snippets
+  read -p "Press any key once you have edited Rakefile and changed snipmate to snipmate.vim"
+  rake deploy_local
+
+echo "Get better colour scheme for terminal"
+  git clone git://github.com/altercation/solarized.git

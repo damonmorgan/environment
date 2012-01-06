@@ -1,0 +1,24 @@
+= Damon Morgan Environment
+
+Environment is a set of scripts to get Max OS X set up as a development machine with all my preferences.
+
+== Prerequisites
+
+  XCode or [GCC for OS X](https://github.com/kennethreitz/osx-gcc-installer). (requires OS X 10.6 or higher)
+
+== Installation
+
+  bash < <(curl -s https://raw.github.com/damonmorgan/environment/master/mac)
+
+== What is installed
+
+* SSH public key (for authenticating with services like Github and Heroku)
+* Homebrew (for managing operating system libraries)
+* git (for version control)
+* bash completion (for reducing rsi)
+* MacVim with Vundle (for a development IDE with plugins)
+* Ack (for finding things in files)
+* wget (for this installer)
+* dotfiles (https://github.com/damonmorgan/dotfiles - my preferred configuration)
+* the Inconsolata font (a nice development font - http://www.levien.com/type/myfonts/inconsolata.html)
+* the Solarized colour scheme (a nice development scheme - http://ethanschoonover.com/solarized)
