@@ -8,6 +8,10 @@ echo "Copying public key to clipboard. Paste it into your Github account ..."
   open https://github.com/account/ssh
   read -p "Press any key once you have pasted into your Github account..."
 
+echo "Upgrade base gem system to latest version"
+  sudo gem update --system
+  sudo gem clean
+
 echo "Installing Homebrew, a good OS X package manager ..."
   /usr/bin/ruby -e "$(curl -fsSL https://raw.github.com/gist/323731)"
   brew update
