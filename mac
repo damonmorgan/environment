@@ -13,7 +13,7 @@ echo "Upgrade base gem system to latest version"
   sudo gem clean
 
 echo "Installing Homebrew, a good OS X package manager ..."
-  /usr/bin/ruby -e "$(curl -fsSL https://raw.github.com/gist/323731)"
+  /usr/bin/ruby -e "$(/usr/bin/curl -fsSL https://raw.github.com/mxcl/homebrew/master/Library/Contributions/install_homebrew.rb)"
   brew update
 
 echo "Installing Packages (git, bash-completion, macvim, ack, wget)"
