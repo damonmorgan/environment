@@ -21,37 +21,38 @@ What is installed
 -----------------
 
 * SSH public key (for authenticating with services like Github and Heroku)
-* Homebrew (for managing operating system libraries)
+* [Homebrew](http://mxcl.github.com/homebrew/) (for managing operating system libraries)
 * postgresql, redis (for database development)
 * ack (for finding things in files)
-* fasd (for fast directory switching)
+* [fasd](https://github.com/clvv/fasd) (for fast directory switching)
 * bash completion (for reducing rsi)
 * MacVim with Vundle (for a development IDE with plugins)
 * wget (for this installer and better file downloading)
 * git (for version control)
-* git-extras, legit (for git enhancements)
+* [git-extras](https://github.com/visionmedia/git-extras), [legit](http://www.git-legit.org/) (for git enhancements)
 * zsh (for latest version to use as default shell)
-* dotfiles (https://github.com/damonmorgan/dotfiles - my preferred configuration)
-* oh-my-zsh (for zsh enhancements)
-* the Inconsolata font (a nice development font - http://www.levien.com/type/myfonts/inconsolata.html)
-* the Solarized colour scheme (a nice development scheme - http://ethanschoonover.com/solarized)
-* rbenv, ruby-build (for Ruby version management - https://github.com/sstephenson/rbenv)
+* [dotfiles](https://github.com/damonmorgan/dotfiles) (my preferred configuration)
+* [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh) (for zsh enhancements)
+* the [Inconsolata font](http://www.levien.com/type/myfonts/inconsolata.html) (a nice development font)
+* the [Solarized colour scheme](http://ethanschoonover.com/solarized) (a nice development scheme)
+* [rbenv](https://github.com/sstephenson/rbenv), ruby-build (for Ruby version management)
 * latest stable ruby (currently 1.9.3-p327)
 * node (for Node.js development)
 * python (for running some useful tools)
-* Heroku Toolbelt for interacting with the Heroku API
-* Heroku Config plugin for local `ENV` variables
-* pow (for development hosting of rack apps)
+* [Heroku Toolbelt](https://toolbelt.heroku.com/) for interacting with the Heroku API
+* [Heroku Config plugin](https://github.com/ddollar/heroku-config) for local `ENV` variables
+* [pow](http://pow.cx/) (for development hosting of rack apps)
+* [sshuttle](https://github.com/apenwarr/sshuttle)
 
 Post Install
 ------------
 
-* gitx (http://gitx.laullon.com/)
-* iterm2 (http://www.iterm2.com/ - change profile preferences to Inconsolata 14pt and Solarized Dark)
-* Sequel Pro (http://www.sequelpro.com/)
-* pgAdmin3 (http://www.pgadmin.org/)
-* Induction (http://inductionapp.com/)
-* Anvil for Pow (http://anvilformac.com/)
+* [gitx](http://gitx.laullon.com/)
+* [iterm2](http://www.iterm2.com/ - change profile preferences to Inconsolata 14pt and Solarized Dark)
+* [Sequel Pro](http://www.sequelpro.com/)
+* [pgAdmin3](http://www.pgadmin.org/)
+* [Induction](http://inductionapp.com/)
+* [Anvil](http://anvilformac.com/) for Pow
 
 Credits
 -------

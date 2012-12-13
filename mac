@@ -114,3 +114,7 @@ echo "Install snippets"
 echo "Get better colour scheme for terminal"
   successfully cd ~/development
   successfully git clone git://github.com/altercation/solarized.git
+
+echo "Install sshuttle for a faster SSH tunnel"
+  successfully cd ~/
+  successfully git clone git://github.com/apenwarr/sshuttle.git
