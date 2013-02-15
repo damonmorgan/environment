@@ -41,6 +41,8 @@ What is installed
 * python (for running some useful tools)
 * [Heroku Toolbelt](https://toolbelt.heroku.com/) for interacting with the Heroku API
 * [Heroku Config plugin](https://github.com/ddollar/heroku-config) for local `ENV` variables
+* [Heroku Accounts plugin](https://github.com/ddollar/heroku-accounts) for using work and personal heroku accounts
+* [Heroku PG Extras plugin](https://github.com/heroku/heroku-pg-extras/) for awesome pg:* commands
 * [pow](http://pow.cx/) (for development hosting of rack apps)
 * [sshuttle](https://github.com/apenwarr/sshuttle)
 

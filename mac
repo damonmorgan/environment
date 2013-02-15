@@ -90,8 +90,10 @@ echo "install other development languages"
 echo "Installing standalone Heroku CLI client. You'll need administrative rights on your machine ..."
   successfully wget -qO- https://toolbelt.heroku.com/install.sh | sh
 
-echo "Installing the heroku-config plugin for pulling config variables locally to be used as ENV variables ..."
+echo "Installing heroku plugins"
   successfully /usr/local/heroku/bin/heroku plugins:install git://github.com/ddollar/heroku-config.git
+  successfully /usr/local/heroku/bin/heroku plugins:install git://github.com/ddollar/heroku-accounts.git
+  successfully /usr/local/heroku/bin/heroku plugins:install git://github.com/heroku/heroku-pg-extras.git
 
 echo "Init Vundle and Install"
   successfully vundle
