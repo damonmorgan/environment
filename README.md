@@ -7,6 +7,7 @@ Prerequisites
 -------------
 
 1) XCode or [Command Line Tools for XCode](https://developer.apple.com/downloads/)
+Note: Full version of XCode is required to build MacVim
 
 2) Set zsh as your login shell.
 
@@ -25,7 +26,6 @@ What is installed
 * postgresql, redis (for database development)
 * ack (for finding things in files)
 * [fasd](https://github.com/clvv/fasd) (for fast directory switching)
-* bash completion (for reducing rsi)
 * MacVim with Vundle (for a development IDE with plugins)
 * wget (for this installer and better file downloading)
 * git (for version control)

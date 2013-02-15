@@ -17,9 +17,6 @@ echo "Copying public key to clipboard. Paste it into your Github account ..."
   successfully open https://github.com/account/ssh
   vared -p "Press any key once you have pasted into your Github account..." tmp
 
-echo "Fixing permissions ..."
-  successfully sudo chown -R `whoami` /usr/local
-
 echo "Upgrade base gem system to latest version"
   successfully sudo gem update --system
   successfully sudo gem clean
@@ -27,6 +24,11 @@ echo "Upgrade base gem system to latest version"
 echo "Installing Homebrew, a good OS X package manager ..."
   successfully ruby -e "$(curl -fsSkL raw.github.com/mxcl/homebrew/go)"
   successfully brew update
+
+echo "Installing lastest zsh, for shell"
+  successfully brew install zsh
+  successfully echo "/usr/local/bin/zsh" >> /etc/shells
+  successfully chsh -s /usr/local/bin/zsh
 
 echo "Installing Postgres, a good open source relational database ..."
   successfully brew install postgresql --no-python
@@ -41,9 +43,6 @@ echo "Installing ack, for searching the contents of files ..."
 echo "Installing fasd, for fast directory navigation..."
   successfully brew install fasd
 
-echo "Installing bash-completion, for better bashing ..."
-  successfully brew install bash-completion
-
 echo "Installing macvim, for better editing ..."
   successfully brew install macvim
 
@@ -55,9 +54,6 @@ echo "Installing git, for better version control ..."
   successfully brew install git-extras
   successfully brew install legit
   successfully legit install
-
-echo "Installing lastest zsh, for shell"
-  successfully brew install zsh
 
 echo "Fetch dotfiles"
   successfully git clone git@github.com:damonmorgan/dotfiles.git ~/.dotfiles
@@ -77,7 +73,7 @@ echo "Install rbenv (a Ruby version manager)"
   successfully rbenv init - zsh
 
 echo "Install lastest ruby"
-  successfully rbenv install 1.9.3-p327
+  successfully rbenv install 1.9.3-p374
   successfully rbenv rehash
 
 echo "Installing pow"
