@@ -8,6 +8,7 @@ Prerequisites
 
 1) XCode or [Command Line Tools for XCode](https://developer.apple.com/downloads/)
 Note: Full version of XCode is required to build MacVim
+Agree to the Xcode license by running Xcode.app or xcodebuild -license
 
 2) Set zsh as your login shell.
 
