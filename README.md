@@ -6,8 +6,8 @@ Environment is a script to get Max OS X set up as a development machine with all
 Prerequisites
 -------------
 
-1) XCode or [Command Line Tools for XCode](https://developer.apple.com/downloads/)
-Note: Full version of XCode is required to build MacVim
+1) XCode and [Command Line Tools for XCode](https://developer.apple.com/downloads/)
+Note: Both are required to build MacVim
 Agree to the Xcode license by running Xcode.app or xcodebuild -license
 
 2) Set zsh as your login shell.

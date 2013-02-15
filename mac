@@ -69,6 +69,7 @@ echo "Fetch better programming font"
 
 echo "Install rbenv (a Ruby version manager)"
   successfully brew install rbenv
+  successfully export RBENV_ROOT=/usr/local/var/rbenv
   successfully brew install ruby-build
   successfully rbenv init - zsh
 
@@ -76,12 +77,12 @@ echo "Install lastest ruby"
   successfully rbenv install 1.9.3-p374
   successfully rbenv rehash
 
-echo "Installing pow"
-  successfully brew install pow
-
 echo "install other development languages"
   successfully brew install node
   successfully brew install python
+
+echo "Installing pow"
+  successfully brew install pow
 
 echo "Installing standalone Heroku CLI client. You'll need administrative rights on your machine ..."
   successfully wget -qO- https://toolbelt.heroku.com/install.sh | sh
