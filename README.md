@@ -18,10 +18,12 @@ Installation
 ------------
 
   zsh < <(curl -s https://raw.github.com/damonmorgan/environment/master/mac_part1)
+
   zsh < <(curl -s https://raw.github.com/damonmorgan/environment/master/mac_part2)
+
   rake install
 
-restart terminal
+  restart terminal
 
   zsh < <(curl -s https://raw.github.com/damonmorgan/environment/master/mac_part3)
 
