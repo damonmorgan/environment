@@ -27,6 +27,7 @@ Installation
 
   zsh < <(curl -s https://raw.github.com/damonmorgan/environment/master/mac_part3)
 
+  zsh < <(curl -s https://raw.github.com/damonmorgan/environment/master/mac_part4)
 
 
 What is installed
