@@ -9,27 +9,6 @@ function vundle () {
   vim -c "execute \"BundleInstall\" | q | q"
 }
 
-echo "Checking for SSH key, generating one if it doesn't exist ..."
-  [[ -f ~/.ssh/id_rsa.pub ]] || ssh-keygen -t rsa -b 4096
-
-echo "Copying public key to clipboard. Paste it into your Github account ..."
-  [[ -f ~/.ssh/id_rsa.pub ]] && cat ~/.ssh/id_rsa.pub | pbcopy
-  successfully open https://github.com/account/ssh
-  vared -p "Press any key once you have pasted into your Github account..." tmp
-
-echo "Upgrade base gem system to latest version"
-  successfully sudo gem update --system
-  successfully sudo gem clean
-
-echo "Installing Homebrew, a good OS X package manager ..."
-  successfully ruby -e "$(curl -fsSkL raw.github.com/mxcl/homebrew/go)"
-  successfully brew update
-
-echo "Installing lastest zsh, for shell"
-  successfully brew install zsh
-  successfully sudo sh -c 'echo "/usr/local/bin/zsh" >> /etc/shells'
-  successfully chsh -s /usr/local/bin/zsh
-
 echo "Installing Postgres, a good open source relational database ..."
   successfully brew install postgresql --no-python
   successfully initdb /usr/local/var/postgres -E utf8
@@ -48,23 +27,6 @@ echo "Installing macvim, for better editing ..."
 
 echo "Installing wget, for better file downloading ..."
   successfully brew install wget
-
-echo "Installing git, for better version control ..."
-  successfully brew install git
-  successfully brew install git-extras
-  successfully brew install legit
-  successfully legit install
-
-echo "Install rbenv (a Ruby version manager)"
-  successfully brew install rbenv
-
-echo "Fetch dotfiles"
-  successfully git clone git@github.com:damonmorgan/dotfiles.git ~/.dotfiles
-
-echo "Install dotfiles"
-  successfully cd ~/.dotfiles
-  successfully git submodule update --init
-  rake install
 
 echo "Fetch better programming font"
   successfully wget http://www.levien.com/type/myfonts/Inconsolata.otf

@@ -17,7 +17,15 @@ Agree to the Xcode license by running Xcode.app or xcodebuild -license
 Installation
 ------------
 
-  zsh < <(curl -s https://raw.github.com/damonmorgan/environment/master/mac)
+  zsh < <(curl -s https://raw.github.com/damonmorgan/environment/master/mac_part1)
+  zsh < <(curl -s https://raw.github.com/damonmorgan/environment/master/mac_part2)
+  rake install
+
+restart terminal
+
+  zsh < <(curl -s https://raw.github.com/damonmorgan/environment/master/mac_part3)
+
+
 
 What is installed
 -----------------
