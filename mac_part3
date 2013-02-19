@@ -33,10 +33,11 @@ echo "Fetch better programming font"
   vared -p "Press any key once you have installed the Inconsolata font..." tmp
 
 echo "Install lastest ruby"
-  brew tap homebrew/dupes
-  brew install apple-gcc42
+  successfully brew tap homebrew/dupes
+  successfully brew install apple-gcc42
+  successfully export CC=gcc
   successfully brew install ruby-build
-  successfully rbenv install 1.9.3-p374
+  successfully rbenv install 1.9.3-p385
   successfully rbenv rehash
 
 echo "install other development languages"
@@ -56,26 +57,3 @@ echo "Installing heroku plugins"
 
 echo "Init Vundle and Install"
   successfully vundle
-
-echo "Building Command-T plugin"
-  successfully cd ~/.dotfiles/vim/bundle/command-t
-  successfully rake make
-
-echo "Create development directory"
-  successfully cd ~/
-  successfully mkdir development
-
-echo "Install snippets"
-  successfully cd ~/development
-  successfully git clone git://github.com/scrooloose/snipmate-snippets.git
-  successfully cd ~/development/snipmate-snippets
-  vared -p "Press any key once you have edited Rakefile and changed snipmate to snipmate.vim" tmp
-  successfully rake deploy_local
-
-echo "Get better colour scheme for terminal"
-  successfully cd ~/development
-  successfully git clone git://github.com/altercation/solarized.git
-
-echo "Install sshuttle for a faster SSH tunnel"
-  successfully cd ~/
-  successfully git clone git://github.com/apenwarr/sshuttle.git
