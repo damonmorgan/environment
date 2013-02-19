@@ -55,25 +55,23 @@ echo "Installing git, for better version control ..."
   successfully brew install legit
   successfully legit install
 
+echo "Install rbenv (a Ruby version manager)"
+  successfully brew install rbenv
+
 echo "Fetch dotfiles"
   successfully git clone git@github.com:damonmorgan/dotfiles.git ~/.dotfiles
 
 echo "Install dotfiles"
   successfully cd ~/.dotfiles
   successfully git submodule update --init
-  successfully rake install
+  rake install
 
 echo "Fetch better programming font"
   successfully wget http://www.levien.com/type/myfonts/Inconsolata.otf
   vared -p "Press any key once you have installed the Inconsolata font..." tmp
 
-echo "Install rbenv (a Ruby version manager)"
-  successfully brew install rbenv
-  successfully export RBENV_ROOT=/usr/local/var/rbenv
-  successfully brew install ruby-build
-  successfully rbenv init - zsh
-
 echo "Install lastest ruby"
+  successfully brew install ruby-build
   successfully rbenv install 1.9.3-p374
   successfully rbenv rehash
 
