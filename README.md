@@ -55,6 +55,7 @@ What is installed
 * [Heroku Config plugin](https://github.com/ddollar/heroku-config) for local `ENV` variables
 * [Heroku Accounts plugin](https://github.com/ddollar/heroku-accounts) for using work and personal heroku accounts
 * [Heroku PG Extras plugin](https://github.com/heroku/heroku-pg-extras/) for awesome pg:* commands
+* [Heroku Redis CLI plugin](https://github.com/ddollar/heroku-redis-cli) for redis:cli command
 * [pow](http://pow.cx/) (for development hosting of rack apps)
 * [sshuttle](https://github.com/apenwarr/sshuttle)
 
