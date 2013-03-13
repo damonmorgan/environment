@@ -22,6 +22,13 @@ echo "Installing Homebrew, a good OS X package manager ..."
   successfully ruby -e "$(curl -fsSkL raw.github.com/mxcl/homebrew/go)"
   successfully brew update
 
+echo "Update OpenSSL and Certs as they are outdated in OSX"
+  successfully brew install openssl
+  successfully brew link openssl --force
+  successfully brew install curl-ca-bundle
+  successfully brew tap raggi/ale
+  successfully brew install openssl-osx-ca
+
 echo "Installing lastest zsh, for shell"
   successfully brew install zsh
   successfully sudo sh -c 'echo "/usr/local/bin/zsh" >> /etc/shells'
