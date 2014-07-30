@@ -5,9 +5,8 @@ echo "upgrade base gem system to latest version"
   sudo gem clean
 
 echo "install xcode"
-  xcode-select --install
-  read -p "Press any key to continue... " -n1 -s
   sudo xcodebuild -license
+  xcode-select --install
   read -p "Press any key to continue... " -n1 -s
 
 echo "installing homebrew"
@@ -22,14 +21,6 @@ echo "add homebrew zsh to shells"
 echo "post brew bundle"
   legit install
   initdb /usr/local/var/postgres -E utf8
-
-echo "latest ruby"
-  rbenv install 2.1.2
-  rbenv rehash
-  rbenv local 2.1.2
-  gem update --system
-  gem clean
-  gem install bundler
 
 echo "update pip"
   pip install --upgrade setuptools
@@ -89,3 +80,12 @@ echo "install sshuttle"
 echo "install AWS cli"
   pip install awscli
 
+echo "latest ruby"
+  ruby_version="$(curl -sSL http://ruby.thoughtbot.com/latest)"
+  eval "$(rbenv init -)"
+  rbenv install "$ruby_version"
+  rbenv local "$ruby_version"
+  rbenv rehash
+  gem update --system
+  gem clean
+  gem install bundler
