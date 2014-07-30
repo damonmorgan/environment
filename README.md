@@ -13,7 +13,7 @@ Agree to the Xcode license by running Xcode.app or xcodebuild -license
 Installation
 ------------
 
-  bash <(curl -s https://raw.github.com/damonmorgan/environment/master/mac)
+  bash <(curl -s https://raw.githubusercontent.com/damonmorgan/environment/master/mac)
 
 What is installed
 -----------------

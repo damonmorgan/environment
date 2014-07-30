@@ -10,7 +10,7 @@ echo "install xcode"
   read -p "Press any key to continue... " -n1 -s
 
 echo "Installing Homebrew, a good OS X package manager ..."
-  ruby -e "$(curl -fsSkL raw.github.com/mxcl/homebrew/go)"
+  ruby -e "$(curl -fsSkL raw.githubusercontent.com/mxcl/homebrew/go)"
   brew bundle
 
 echo "change shell to zsh"
