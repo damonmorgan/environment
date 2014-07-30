@@ -1,0 +1,89 @@
+#!/usr/bin/env bash
+
+echo "Upgrade base gem system to latest version"
+  sudo gem update --system
+  sudo gem clean
+
+echo "install xcode"
+  sudo xcodebuild -license
+  xcode-select --install
+  read -p "Press any key to continue... " -n1 -s
+
+echo "Installing Homebrew, a good OS X package manager ..."
+  ruby -e "$(curl -fsSkL raw.github.com/mxcl/homebrew/go)"
+  brew bundle
+
+echo "change shell to zsh"
+  sudo sh -c 'echo "/usr/local/bin/zsh" >> /etc/shells'
+  chsh -s /usr/local/bin/zsh
+
+echo "post brew bundle"
+  legit install
+  initdb /usr/local/var/postgres -E utf8
+
+echo "latest ruby"
+  rbenv install 2.1.2
+  rbenv rehash
+  rbenv local 2.1.2
+  gem update --system
+  gem clean
+  gem install bundler
+
+echo "update pip"
+  pip install --upgrade setuptools
+  pip install --upgrade pip
+
+echo "Checking for SSH key, generating one if it doesn't exist ..."
+  [[ -f ~/.ssh/id_rsa.pub ]] || ssh-keygen -t rsa -b 4096
+
+echo "Copying public key to clipboard. Paste it into your Github account ..."
+  [[ -f ~/.ssh/id_rsa.pub ]] && cat ~/.ssh/id_rsa.pub | pbcopy
+  open https://github.com/account/ssh
+  read -p "Press any key once you have pasted into your Github account..." -n1 -s
+
+echo "Fetch dotfiles"
+  git clone git@github.com:damonmorgan/dotfiles.git ~/.dotfiles
+
+echo "Install dotfiles"
+  cd ~/.dotfiles
+  git submodule update --init
+  rake install
+
+echo "Installing standalone Heroku CLI client. You'll need administrative rights on your machine ..."
+  wget -qO- https://toolbelt.heroku.com/install.sh | sh
+
+echo "Installing heroku plugins"
+  /usr/local/heroku/bin/heroku plugins:install git://github.com/ddollar/heroku-config.git
+  /usr/local/heroku/bin/heroku plugins:install git://github.com/ddollar/heroku-accounts.git
+  /usr/local/heroku/bin/heroku plugins:install git://github.com/heroku/heroku-pg-extras.git
+  /usr/local/heroku/bin/heroku plugins:install git://github.com/ddollar/heroku-redis-cli.git
+
+echo "Init Vundle and Install"
+  vim -c "execute \"BundleInstall\" | q | q"
+
+echo "Building Command-T plugin"
+  cd ~/.dotfiles/vim/bundle/command-t
+  rake make
+
+echo "Create development directory"
+  cd ~/
+  mkdir development
+
+echo "Install snippets"
+  cd ~/development
+  git clone git://github.com/scrooloose/snipmate-snippets.git
+  cd ~/development/snipmate-snippets
+  read -p "Press any key once you have edited Rakefile and changed snipmate to snipmate.vim" -n1 -s
+  rake deploy_local
+
+echo "Get better colour scheme for terminal"
+  cd ~/development
+  git clone git://github.com/altercation/solarized.git
+
+echo "Install sshuttle for a faster SSH tunnel"
+  cd ~/
+  git clone git://github.com/apenwarr/sshuttle.git
+
+echo "AWS cli"
+  pip install awscli
+
