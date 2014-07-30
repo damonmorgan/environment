@@ -3,6 +3,7 @@
 
 # Make sure we’re using the latest Homebrew
 update
+doctor
 
 # Upgrade any already-installed formulae
 upgrade
