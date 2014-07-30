@@ -25,7 +25,7 @@ What is installed
 * git
   * [git-extras](https://github.com/visionmedia/git-extras)
   * [legit](http://www.git-legit.org/)
-  * [gitx](http://gitx.laullon.com/))
+  * [gitx](http://gitx.laullon.com/)
 * development environment version managers
   * [rbenv](https://github.com/sstephenson/rbenv), ruby-build
   * [nvm](https://github.com/creationix/nvm) (not using yet)
@@ -46,10 +46,10 @@ What is installed
   * virtualbox, atom, dropbox, etc.
 * [dotfiles](https://github.com/damonmorgan/dotfiles) (preferred configuration)
 * [Heroku Toolbelt](https://toolbelt.heroku.com/)
-  * [Heroku Config plugin](https://github.com/ddollar/heroku-config) for local `ENV` variables
-  * [Heroku Accounts plugin](https://github.com/ddollar/heroku-accounts) heroku accounts:set work
-  * [Heroku PG Extras plugin](https://github.com/heroku/heroku-pg-extras) heroku pg:index-size
-  * [Heroku Redis CLI plugin](https://github.com/ddollar/heroku-redis-cli) heroku redis:cli
+  * [config plugin](https://github.com/ddollar/heroku-config) for local `ENV` variables
+  * [accounts plugin](https://github.com/ddollar/heroku-accounts) heroku accounts:set work
+  * [pg-extras plugin](https://github.com/heroku/heroku-pg-extras) heroku pg:index-size
+  * [redis:cli plugin](https://github.com/ddollar/heroku-redis-cli) heroku redis:cli
 * [sshuttle](https://github.com/apenwarr/sshuttle)
 * [aws cli](http://aws.amazon.com/cli/)
 
