@@ -5,8 +5,9 @@ echo "Upgrade base gem system to latest version"
   sudo gem clean
 
 echo "install xcode"
-  sudo xcodebuild -license
   xcode-select --install
+  read -p "Press any key to continue... " -n1 -s
+  sudo xcodebuild -license
   read -p "Press any key to continue... " -n1 -s
 
 echo "Installing Homebrew, a good OS X package manager ..."
