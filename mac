@@ -71,8 +71,8 @@ echo "create development directory"
 echo "install snippets"
   cd ~/development
   git clone git://github.com/scrooloose/snipmate-snippets.git
+  sed -i -e 's/snipmate/snipmate.vim/g' snipmate-snippets/Rakefile
   cd ~/development/snipmate-snippets
-  read -p "Press any key once you have edited Rakefile and changed snipmate to snipmate.vim" -n1 -s
   rake deploy_local
 
 echo "get better colour scheme for terminal"
