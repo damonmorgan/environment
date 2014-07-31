@@ -95,4 +95,4 @@ echo "latest ruby"
   rbenv rehash
   gem update --system
   gem clean
-  gem install bundler
+  gem install bundler --no-document
