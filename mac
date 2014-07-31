@@ -61,7 +61,7 @@ echo "init Vundle and install"
   vim +PluginInstall +qall
 
 echo "build Command-T plugin"
-  cd ~/.dotfiles/vim/bundle/command-t
+  cd ~/.vim/bundle/command-t
   rake make
 
 echo "create development directory"
