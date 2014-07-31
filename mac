@@ -45,7 +45,6 @@ echo "fetch dotfiles"
 
 echo "install dotfiles"
   cd ~/.dotfiles
-  git submodule update --init
   rake install
 
 echo "install standalone Heroku CLI client. You'll need administrative rights on your machine ..."
@@ -58,7 +57,8 @@ echo "install heroku plugins"
   /usr/local/heroku/bin/heroku plugins:install git://github.com/ddollar/heroku-redis-cli.git
 
 echo "init Vundle and install"
-  vim -c "execute \"BundleInstall\" | q | q"
+  git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+  vim +PluginInstall +qall
 
 echo "build Command-T plugin"
   cd ~/.dotfiles/vim/bundle/command-t
