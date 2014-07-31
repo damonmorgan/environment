@@ -34,6 +34,12 @@ echo "copying public key to clipboard. Paste it into your Github account ..."
   open https://github.com/account/ssh
   read -p "Press any key once you have pasted into your Github account..." -n1 -s
 
+echo "install prey"
+  open https://panel.preyproject.com/profile
+  echo "Type your prey apikey found on your profile page, followed by [ENTER]:"
+  read apikey
+  API_KEY="$apikey" brew cask install prey
+
 echo "fetch dotfiles"
   git clone git@github.com:damonmorgan/dotfiles.git ~/.dotfiles
 

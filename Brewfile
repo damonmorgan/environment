@@ -80,7 +80,6 @@ cask install atom
 cask install calibre
 cask install crashplan
 cask install flux
-cask install prey
 cask install skitch
 cask install skype
 cask install spotify
