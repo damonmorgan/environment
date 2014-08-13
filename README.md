@@ -56,7 +56,9 @@ Post Install
 ------------
 
 Configure iTerm to use the new Inconsolata Font and Solarized colourscheme
-(change profile preferences to Inconsolata 14pt and Solarized Dark)
+(change profile preferences to Inconsolata for Powerline 14pt and Solarized Dark)
+
+Turn on FileVault
 
 
 Credits
