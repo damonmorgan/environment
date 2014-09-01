@@ -89,9 +89,6 @@ echo "install sshuttle"
   cd ~/
   git clone git://github.com/apenwarr/sshuttle.git
 
-echo "install AWS cli"
-  pip install awscli
-
 echo "latest ruby"
   export RBENV_ROOT=$(brew --prefix rbenv)
   ruby_version="$(curl -sSL http://ruby.thoughtbot.com/latest)"

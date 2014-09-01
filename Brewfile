@@ -55,6 +55,7 @@ install wget
 install curl
 link curl --force
 install ngrok
+install awscli
 
 # editor
 install vim --override-system-vi
