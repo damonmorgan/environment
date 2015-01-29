@@ -1,98 +1,85 @@
 # Install command-line tools using Homebrew
-# Usage: `brew bundle Brewfile`
-
-# Make sure we’re using the latest Homebrew
-update
-doctor
-
-# Upgrade any already-installed formulae
-upgrade
+# Usage: `brew brewdle`
 
 # brew cask for apps
-install caskroom/cask/brew-cask
-tap caskroom/versions
+brew 'caskroom/cask'
+tap 'caskroom/versions'
 
 # shell
-install zsh
+brew 'zsh'
 
 # terminal
-cask install iterm2
+cask 'iterm2'
 
 # git
-install git
-install git-extras
-install legit
-cask install gitx-l
+brew 'git'
+brew 'git-extras'
+brew 'legit'
+cask 'gitx-l'
 
 # ruby version manager
-install rbenv
-install ruby-build
+brew 'rbenv'
+brew 'ruby-build'
 
 # other development languages
-install node
-install python
-cask install java
-install go
-install scala
+brew 'node'
+brew 'python'
+cask 'java'
+brew 'go'
+brew 'scala'
 
 # databases
-install postgresql --no-python
-install redis
-install rabbitmq
-install memcached
+brew 'postgresql', args: ['no-python']
+brew 'redis'
+brew 'rabbitmq'
+brew 'memcached'
 
 # replace default openssl
-install openssl
-link openssl --force
-#install curl-ca-bundle
-#tap raggi/ale
-#install openssl-osx-ca
+brew 'openssl'
 
 # utils
-install ack
-install fasd
-install wget
-install curl
-link curl --force
-install ngrok
-install awscli
+brew 'ack'
+brew 'fasd'
+brew 'wget'
+brew 'curl'
+
+brew 'ngrok'
+brew 'awscli'
+brew 'terminal-notifier'
 
 # editor
-install vim --override-system-vi
-install macvim
+brew 'vim', args: ['override-system-vi']
+brew 'macvim'
 
 # development font
-tap caskroom/fonts
-cask install font-inconsolata
-cask install font-inconsolata-for-powerline
+tap 'caskroom/fonts'
+cask 'font-inconsolata'
+cask 'font-inconsolata-for-powerline'
 
 # browsers
-cask install google-chrome-dev
-cask install opera
-cask install firefox
-cask install lastpass-universal
+cask 'google-chrome-dev'
+cask 'opera'
+cask 'firefox'
+cask 'lastpass-universal'
 
 # apps
-cask install virtualbox
-cask install vmware-fusion
-cask install vlc
-cask install adium
-cask install atom
-cask install calibre
-cask install crashplan
-cask install flux
-cask install skitch
-cask install skype
-cask install spotify
-cask install tinyumbrella
-cask install transmission-remote-gui
-cask install truecrypt71a
-cask install cyberduck
+cask 'virtualbox'
+cask 'vmware-fusion'
+cask 'vlc'
+cask 'adium'
+cask 'atom'
+cask 'calibre'
+cask 'crashplan'
+cask 'flux'
+cask 'skitch'
+cask 'skype'
+cask 'spotify'
+cask 'tinyumbrella'
+cask 'transmission-remote-gui'
+cask 'truecrypt71a'
+cask 'cyberduck'
 
 # drives
-cask install dropbox
-cask install google-drive
-cask install skydrive #onedrive
-
-# Remove outdated versions from the cellar
-cleanup
+cask 'dropbox'
+cask 'google-drive'
+cask 'skydrive' #onedrive
