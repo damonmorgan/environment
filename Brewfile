@@ -39,6 +39,7 @@ brew 'openssl'
 
 # utils
 brew 'ack'
+brew 'the_silver_searcher'
 brew 'fasd'
 brew 'wget'
 brew 'curl'
