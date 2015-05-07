@@ -31,7 +31,7 @@ What is installed
   * ruby, node, python, java, go, scala
 * 'databases'
   * postgresql, redis, rabbitmq, memcached
-* utilities (openssl, ack, [fasd](https://github.com/clvv/fasd), wget, curl, [ngrok](https://ngrok.com/))
+* utilities (openssl, ack, silver searcher, [fasd](https://github.com/clvv/fasd), wget, curl, [ngrok](https://ngrok.com/))
 * vim/MacVim with [Vundle](http://github.com/gmarik/vundle) (preferred editor)
 * development fonts
   * [Inconsolata](http://www.levien.com/type/myfonts/inconsolata.html)
