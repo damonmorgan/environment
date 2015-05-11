@@ -84,3 +84,6 @@ cask 'cyberduck'
 cask 'dropbox'
 cask 'google-drive'
 cask 'skydrive' #onedrive
+
+# docker
+brew boot2docker

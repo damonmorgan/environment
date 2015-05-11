@@ -50,6 +50,7 @@ What is installed
   * [redis:cli plugin](https://github.com/ddollar/heroku-redis-cli) heroku redis:cli
 * [sshuttle](https://github.com/apenwarr/sshuttle)
 * [aws cli](http://aws.amazon.com/cli/)
+* [docker](http://boot2docker.io/)
 
 
 Post Install
