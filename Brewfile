@@ -2,8 +2,9 @@
 # Usage: `brew brewdle`
 
 # brew cask for apps
-brew 'caskroom/cask'
+tap 'caskroom/cask'
 tap 'caskroom/versions'
+brew 'brew-cask'
 
 # shell
 brew 'zsh'
@@ -61,11 +62,12 @@ cask 'font-inconsolata-for-powerline'
 cask 'google-chrome-dev'
 cask 'opera'
 cask 'firefox'
-cask 'lastpass-universal'
+cask 'lastpass'
 
 # apps
 cask 'virtualbox'
 cask 'vmware-fusion'
+cask 'rdm'
 cask 'vlc'
 cask 'adium'
 cask 'atom'
@@ -83,7 +85,7 @@ cask 'cyberduck'
 # drives
 cask 'dropbox'
 cask 'google-drive'
-cask 'skydrive' #onedrive
+#cask 'skydrive' #onedrive
 
 # docker
-brew boot2docker
+brew 'boot2docker'
