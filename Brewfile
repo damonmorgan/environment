@@ -44,6 +44,7 @@ brew 'the_silver_searcher'
 brew 'fasd'
 brew 'wget'
 brew 'curl'
+brew 'ccat'
 
 brew 'ngrok'
 brew 'awscli'
