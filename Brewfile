@@ -39,6 +39,7 @@ brew 'memcached'
 brew 'openssl'
 
 # utils
+brew 'coreutils'
 brew 'ack'
 brew 'the_silver_searcher'
 brew 'fasd'
