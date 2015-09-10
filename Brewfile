@@ -50,6 +50,7 @@ brew 'ccat'
 brew 'ngrok'
 brew 'awscli'
 brew 'terminal-notifier'
+brew 'forego'
 
 # editor
 brew 'vim', args: ['override-system-vi']
