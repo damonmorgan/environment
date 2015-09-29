@@ -1,5 +1,5 @@
 # Install command-line tools using Homebrew
-# Usage: `brew brewdle`
+# Usage: `brew bundle`
 
 # brew cask for apps
 tap 'caskroom/cask'
