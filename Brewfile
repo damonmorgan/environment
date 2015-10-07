@@ -16,7 +16,7 @@ cask 'iterm2'
 brew 'git'
 brew 'git-extras'
 brew 'legit'
-cask 'gitx-l'
+cask 'rowanj-gitx'
 
 # ruby version manager
 brew 'rbenv'
@@ -69,7 +69,7 @@ cask 'lastpass'
 
 # apps
 cask 'virtualbox'
-cask 'vmware-fusion'
+#cask 'vmware-fusion'
 cask 'rdm'
 cask 'vlc'
 cask 'adium'
@@ -80,14 +80,17 @@ cask 'flux'
 cask 'skitch'
 cask 'skype'
 cask 'spotify'
-cask 'tinyumbrella'
+#cask 'tinyumbrella'
 cask 'transmission-remote-gui'
 cask 'truecrypt71a'
 cask 'cyberduck'
+cask 'android-file-transfer'
+cask 'gimp'
 
 # drives
 cask 'dropbox'
 cask 'google-drive'
+cask 'amazon-cloud-drive'
 #cask 'skydrive' #onedrive
 
 # docker
