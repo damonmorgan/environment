@@ -86,6 +86,8 @@ cask 'truecrypt71a'
 cask 'cyberduck'
 cask 'android-file-transfer'
 cask 'gimp'
+#cask 'microsoft-office365'
+#cask 'steam'
 
 # drives
 cask 'dropbox'
