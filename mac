@@ -70,6 +70,7 @@ echo "install heroku plugins"
   /usr/local/heroku/bin/heroku plugins:install git://github.com/ddollar/heroku-config.git
   /usr/local/heroku/bin/heroku plugins:install git://github.com/heroku/heroku-pg-extras.git
   /usr/local/heroku/bin/heroku plugins:install git://github.com/ddollar/heroku-redis-cli.git
+  /usr/local/heroku/bin/heroku plugins:install https://github.com/heroku/heroku-oauth
 
 echo "init Vundle and install"
   git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
@@ -99,12 +100,10 @@ echo "install sshuttle"
   git clone git://github.com/apenwarr/sshuttle.git
 
 echo "latest ruby"
-  export RBENV_ROOT=$(brew --prefix rbenv)
   ruby_version="$(curl -sSL http://ruby.thoughtbot.com/latest)"
-  eval "$(rbenv init -)"
-  rbenv install "$ruby_version"
-  rbenv local "$ruby_version"
-  rbenv rehash
+  ruby-install "ruby $ruby_version"
+  echo "$ruby_version" > .ruby-version
+  cd ~/
   gem update --system
   gem clean
   gem install bundler --no-document

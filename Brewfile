@@ -19,8 +19,8 @@ brew 'legit'
 cask 'rowanj-gitx'
 
 # ruby version manager
-brew 'rbenv'
-brew 'ruby-build'
+brew 'chruby'
+brew 'ruby-install'
 
 # other development languages
 brew 'node'
