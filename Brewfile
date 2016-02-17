@@ -96,5 +96,4 @@ cask 'amazon-cloud-drive'
 #cask 'skydrive' #onedrive
 
 # docker
-brew 'docker-machine'
-brew 'docker'
+cask 'dockertoolbox'
