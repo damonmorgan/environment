@@ -97,3 +97,4 @@ cask 'amazon-cloud-drive'
 
 # docker
 brew 'docker-machine'
+brew 'docker'
