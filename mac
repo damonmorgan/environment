@@ -38,6 +38,9 @@ echo "post brew bundle"
   legit install
   initdb /usr/local/var/postgres -E utf8
 
+echo "default docker machine"
+  docker-machine create --driver virtualbox default
+
 echo "update pip"
   pip install --upgrade setuptools
   pip install --upgrade pip
