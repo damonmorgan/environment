@@ -96,4 +96,4 @@ cask 'amazon-cloud-drive'
 #cask 'skydrive' #onedrive
 
 # docker
-brew 'boot2docker'
+brew 'docker-machine'
