@@ -47,7 +47,7 @@ brew 'wget'
 brew 'curl'
 brew 'ccat'
 
-brew 'ngrok'
+#brew 'ngrok' #v2 no open source - using cask version below
 brew 'awscli'
 brew 'terminal-notifier'
 brew 'forego'
@@ -88,6 +88,7 @@ cask 'android-file-transfer'
 cask 'gimp'
 #cask 'microsoft-office365'
 #cask 'steam'
+cask 'ngrok'
 
 # drives
 cask 'dropbox'
