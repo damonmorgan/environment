@@ -74,6 +74,7 @@ echo "install heroku plugins"
   /usr/local/heroku/bin/heroku plugins:install git://github.com/heroku/heroku-pg-extras.git
   /usr/local/heroku/bin/heroku plugins:install git://github.com/ddollar/heroku-redis-cli.git
   /usr/local/heroku/bin/heroku plugins:install https://github.com/heroku/heroku-oauth
+  /usr/local/heroku/bin/heroku plugins:install heroku-docker
 
 echo "init Vundle and install"
   git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
