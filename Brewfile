@@ -13,7 +13,7 @@ brew 'zsh'
 cask 'iterm2'
 
 # git
-brew 'git'
+brew 'git', args: ['without-completions']
 brew 'git-extras'
 brew 'legit'
 cask 'rowanj-gitx'
