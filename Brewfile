@@ -64,20 +64,20 @@ cask 'font-inconsolata-for-powerline'
 # browsers
 cask 'google-chrome-dev'
 cask 'opera'
+cask 'opera-developer'
 cask 'firefox'
-cask 'lastpass'
+cask 'firefoxdeveloperedition'
+#cask 'lastpass'
 
 # apps
 cask 'virtualbox'
-#cask 'vmware-fusion'
 cask 'rdm'
 cask 'vlc'
-cask 'adium'
 cask 'atom'
 cask 'calibre'
 cask 'crashplan'
 cask 'flux'
-cask 'skitch'
+#cask 'skitch'
 cask 'skype'
 cask 'spotify'
 #cask 'tinyumbrella'
@@ -97,4 +97,4 @@ cask 'amazon-cloud-drive'
 #cask 'skydrive' #onedrive
 
 # docker
-cask 'dockertoolbox'
+cask 'docker'
