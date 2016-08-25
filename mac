@@ -34,7 +34,7 @@ echo "add homebrew zsh to shells"
 
 echo "post brew bundle"
   brew link curl --force
-  brew link openssl --force
+  #brew link openssl --force #homebrew doesn't allow this anymore
   initdb /usr/local/var/postgres -E utf8
 
 echo "update pip"
