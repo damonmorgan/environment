@@ -35,6 +35,7 @@ brew 'memcached'
 
 # replace default openssl
 brew 'openssl'
+brew 'sshuttle'
 
 # utils
 brew 'coreutils'
