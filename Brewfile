@@ -5,6 +5,10 @@
 tap 'caskroom/cask'
 tap 'caskroom/versions'
 
+# replace default openssl
+brew 'openssl'
+brew 'sshuttle'
+
 # shell
 brew 'zsh'
 
@@ -32,10 +36,6 @@ brew 'postgresql', args: ['no-python']
 brew 'redis'
 brew 'rabbitmq'
 brew 'memcached'
-
-# replace default openssl
-brew 'openssl'
-brew 'sshuttle'
 
 # utils
 brew 'coreutils'
