@@ -4,7 +4,6 @@
 # brew cask for apps
 tap 'caskroom/cask'
 tap 'caskroom/versions'
-brew 'brew-cask'
 
 # shell
 brew 'zsh'
