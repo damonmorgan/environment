@@ -79,7 +79,7 @@ cask 'skype'
 cask 'spotify'
 #cask 'tinyumbrella'
 cask 'transmission-remote-gui'
-cask 'truecrypt71a'
+#cask 'truecrypt71a' #No available Cask for truecrypt71a
 cask 'cyberduck'
 cask 'android-file-transfer'
 cask 'gimp'
@@ -90,7 +90,7 @@ cask 'ngrok'
 # drives
 cask 'dropbox'
 cask 'google-drive'
-cask 'amazon-cloud-drive'
+#cask 'amazon-cloud-drive' #No available Cask for amazon-cloud-drive
 #cask 'skydrive' #onedrive
 
 # docker
