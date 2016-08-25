@@ -15,7 +15,6 @@ cask 'iterm2'
 # git
 brew 'git', args: ['without-completions']
 brew 'git-extras'
-brew 'legit'
 cask 'rowanj-gitx'
 
 # ruby version manager
@@ -47,7 +46,6 @@ brew 'wget'
 brew 'curl'
 brew 'ccat'
 
-#brew 'ngrok' #v2 no open source - using cask version below
 brew 'awscli'
 brew 'terminal-notifier'
 brew 'forego'
