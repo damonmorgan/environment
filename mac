@@ -35,11 +35,7 @@ echo "add homebrew zsh to shells"
 echo "post brew bundle"
   brew link curl --force
   brew link openssl --force
-  legit install
   initdb /usr/local/var/postgres -E utf8
-
-echo "default docker machine"
-  docker-machine create --driver virtualbox default
 
 echo "update pip"
   pip install --upgrade setuptools
@@ -148,9 +144,6 @@ defaults write NSGlobalDomain NSQuitAlwaysKeepsWindows -bool false
 
 # Never go into computer sleep mode
 systemsetup -setcomputersleep Off > /dev/null
-
-# Check for software updates daily, not just once per week
-defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
 
 ###############################################################################
 # SSD-specific tweaks                                                         #
