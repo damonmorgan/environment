@@ -99,6 +99,8 @@ echo "latest ruby"
   ruby_version="$(curl -sSL http://ruby.thoughtbot.com/latest)"
   ruby-install "ruby $ruby_version"
   echo "$ruby_version" > .ruby-version
+  source $(brew --prefix chruby)/share/chruby/chruby.sh
+  source $(brew --prefix chruby)/share/chruby/auto.sh
   cd ~/
   gem update --system
   gem clean
