@@ -242,9 +242,14 @@ defaults write com.apple.dock tilesize -int 46
 echo "Install the Solarized Dark theme for iTerm"
 cd ~
 open "development/solarized/iterm2-colors-solarized/Solarized Dark.itermcolors"
+read -p "Press any key to continue... " -n1 -s
 
 echo "Don’t display the annoying prompt when quitting iTerm"
 defaults write com.googlecode.iterm2 PromptOnQuit -bool false
+
+echo "Inconsolata Font for iTerm2"
+/usr/libexec/PlistBuddy -c 'Set :"New Bookmarks":0:"Normal Font" Inconsolata 14' ~/Library/Preferences/com.googlecode.iterm2.plist
+/usr/libexec/PlistBuddy -c 'Set :"New Bookmarks":0:"Non Ascii Font" Inconsolata 14' ~/Library/Preferences/com.googlecode.iterm2.plist
 
 defaults read com.googlecode.iterm2
 
