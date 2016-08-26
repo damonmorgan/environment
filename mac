@@ -147,11 +147,14 @@ echo "Show batter % in menu bar"
 defaults write com.apple.menuextra.battery ShowPercent -string "YES"
 
 ###############################################################################
-# Mouse                                                                       #
+# Mouse and trackpad                                                          #
 ###############################################################################
 
 echo "Turn on mouse secondary click"
 defaults write com.apple.driver.AppleBluetoothMultitouch.mouse MouseButtonMode TwoButton
+
+echo "Turn on trackpad App Expose"
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeFingerVertSwipeGesture -int 2
 
 ###############################################################################
 # Mac App Store                                                               #
