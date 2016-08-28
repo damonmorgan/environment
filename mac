@@ -23,7 +23,7 @@ echo "installing homebrew"
   # Upgrade any already-installed formulae
   brew upgrade
   brew install wget
-  wget https://raw.githubusercontent.com/damonmorgan/environment/master/Brewfile
+  wget https://raw.githubusercontent.com/damonmorgan/environment/master/Brewfile -O ~/Brewfile
   brew tap Homebrew/bundle
   brew bundle
   # Remove outdated versions from the cellar
@@ -51,7 +51,7 @@ echo "copying public key to clipboard. Paste it into your Github account ..."
   read -p "Press any key once you have pasted into your Github account..." -n1 -s
 
 echo "install prey"
-  open https://panel.preyproject.com/profile
+  open https://panel.preyproject.com/settings
   echo "Type your prey apikey found on your profile page, followed by [ENTER]:"
   read apikey
   API_KEY="$apikey" brew cask install prey
