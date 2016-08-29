@@ -11,6 +11,7 @@ brew 'sshuttle'
 
 # shell
 brew 'zsh'
+brew 'zsh-completions'
 
 # terminal
 cask 'iterm2'
