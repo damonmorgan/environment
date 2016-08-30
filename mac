@@ -64,6 +64,15 @@ echo "install dotfiles"
   rake install
   cd ~/
 
+echo "install docker completions"
+  cd ~/.zsh
+  mkdir completions
+  cd ~/
+  wget https://raw.githubusercontent.com/docker/docker/master/contrib/completion/zsh/_docker -O ~/.zsh/completions/_docker
+  wget https://raw.githubusercontent.com/docker/machine/master/contrib/completion/zsh/_docker-machine -O ~/.zsh/completions/_docker-machine
+  wget https://raw.githubusercontent.com/docker/compose/master/contrib/completion/zsh/_docker-compose -O ~/.zsh/completions/_docker-compose
+
+
 echo "install standalone Heroku CLI client. You'll need administrative rights on your machine ..."
   wget -qO- https://toolbelt.heroku.com/install.sh | sh
 
