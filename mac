@@ -25,7 +25,7 @@ echo "installing homebrew"
   brew install wget
   wget https://raw.githubusercontent.com/damonmorgan/environment/master/Brewfile -O ~/Brewfile
   brew tap Homebrew/bundle
-  brew bundle
+  brew bundle --verbose
   # Remove outdated versions from the cellar
   brew cleanup
 
