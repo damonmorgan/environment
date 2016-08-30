@@ -240,6 +240,10 @@ defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 echo "Avoid creating .DS_Store files on network volumes"
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 
+echo "Set Downloads as the default location for new Finder windows"
+defaults write com.apple.finder NewWindowTarget -string "PfLo"
+defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}/Downloads/"
+
 ###############################################################################
 # Dock, Dashboard, and hot corners                                            #
 ###############################################################################
