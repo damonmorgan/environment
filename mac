@@ -28,6 +28,7 @@ echo "installing homebrew"
   brew bundle --verbose
   # Remove outdated versions from the cellar
   brew cleanup
+  brew cask cleanup
 
 echo "add homebrew zsh to shells"
   sudo sh -c 'echo "/usr/local/bin/zsh" >> /etc/shells'
