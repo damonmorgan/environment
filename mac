@@ -131,6 +131,10 @@ echo "latest ruby"
   gem install bundler --no-document
   cd ~/
 
+echo "opening apps for configuration"
+  open -a Flux
+  read -p "Press any key to continue... " -n1 -s
+
 echo "set osx preferences"
 # from ~/.osx — http://mths.be/osx
 
