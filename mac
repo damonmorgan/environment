@@ -129,6 +129,7 @@ echo "latest ruby"
   cd ~/development
   ruby_version="$(curl -s https://raw.githubusercontent.com/postmodern/ruby-versions/master/ruby/stable.txt | tail -1)"
   ruby-install "ruby $ruby_version"
+  rm -rf ~/src
   echo "$ruby_version" > .ruby-version
   source $(brew --prefix chruby)/share/chruby/chruby.sh
   source $(brew --prefix chruby)/share/chruby/auto.sh
