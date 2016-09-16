@@ -127,7 +127,7 @@ echo "setup iTerm2 DynamicProfile and make default"
 
 echo "latest ruby"
   cd ~/development
-  ruby_version="$(curl -sSL http://ruby.thoughtbot.com/latest)"
+  ruby_version="$(curl -s https://raw.githubusercontent.com/postmodern/ruby-versions/master/ruby/stable.txt | tail -1)"
   ruby-install "ruby $ruby_version"
   echo "$ruby_version" > .ruby-version
   source $(brew --prefix chruby)/share/chruby/chruby.sh
