@@ -118,6 +118,9 @@ echo "Install the Solarized Dark theme for iTerm2"
 echo "Don’t display the annoying prompt when quitting iTerm"
   defaults write com.googlecode.iterm2 PromptOnQuit -bool false
 
+echo "Check for iTerm updates automatically"
+  defaults write com.googlecode.iterm2 SUEnableAutomaticChecks -bool true
+
 echo "setup iTerm2 DynamicProfile"
   wget https://raw.githubusercontent.com/damonmorgan/environment/master/iTerm2/DynamicProfiles/inconsolarized.json -O ~/Library/Application\ Support/iTerm2/DynamicProfiles/inconsolarized.json
 
