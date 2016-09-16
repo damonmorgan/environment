@@ -111,9 +111,12 @@ echo "get better colour scheme for terminal"
   cd ~/
 
 echo "Install the Solarized Dark theme for iTerm2"
-cd ~
-open "development/solarized/iterm2-colors-solarized/Solarized Dark.itermcolors"
-read -p "Press any key to continue... " -n1 -s
+  cd ~
+  open "development/solarized/iterm2-colors-solarized/Solarized Dark.itermcolors"
+  read -p "Press any key to continue... " -n1 -s
+
+echo "Don’t display the annoying prompt when quitting iTerm"
+  defaults write com.googlecode.iterm2 PromptOnQuit -bool false
 
 echo "setup iTerm2 DynamicProfile"
   wget https://raw.githubusercontent.com/damonmorgan/environment/master/iTerm2/DynamicProfiles/inconsolarized.json -O ~/Library/Application\ Support/iTerm2/DynamicProfiles/inconsolarized.json
