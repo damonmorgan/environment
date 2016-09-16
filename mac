@@ -121,8 +121,9 @@ echo "Don’t display the annoying prompt when quitting iTerm"
 echo "Check for iTerm updates automatically"
   defaults write com.googlecode.iterm2 SUEnableAutomaticChecks -bool true
 
-echo "setup iTerm2 DynamicProfile"
+echo "setup iTerm2 DynamicProfile and make default"
   wget https://raw.githubusercontent.com/damonmorgan/environment/master/iTerm2/DynamicProfiles/inconsolarized.json -O ~/Library/Application\ Support/iTerm2/DynamicProfiles/inconsolarized.json
+  defaults write com.googlecode.iterm2 "Default Bookmark Guid" "d326c889-7564-409b-8b26-d3671001617e"
 
 echo "latest ruby"
   cd ~/development
