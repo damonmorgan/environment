@@ -266,6 +266,13 @@ defaults write com.apple.finder NewWindowTarget -string "PfLo"
 defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}/Downloads/"
 
 ###############################################################################
+# TextEdit
+###############################################################################
+
+echo "plain text default for TextEdit"
+defaults write com.apple.TextEdit RichText -int 0
+
+###############################################################################
 # Dock, Dashboard, and hot corners                                            #
 ###############################################################################
 

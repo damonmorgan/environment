@@ -22,7 +22,6 @@ What is installed
 * [iterm2](http://www.iterm2.com/) (preferred terminal)
 * git
   * [git-extras](https://github.com/visionmedia/git-extras)
-  * [legit](http://www.git-legit.org/)
   * [gitx](http://gitx.laullon.com/)
 * development environment version managers
   * [rbenv](https://github.com/sstephenson/rbenv), ruby-build
@@ -45,7 +44,6 @@ What is installed
 * [dotfiles](https://github.com/damonmorgan/dotfiles) (preferred configuration)
 * [Heroku Toolbelt](https://toolbelt.heroku.com/)
   * [config plugin](https://github.com/ddollar/heroku-config) for local `ENV` variables
-  * [accounts plugin](https://github.com/ddollar/heroku-accounts) heroku accounts:set work
   * [pg-extras plugin](https://github.com/heroku/heroku-pg-extras) heroku pg:index-size
   * [redis:cli plugin](https://github.com/ddollar/heroku-redis-cli) heroku redis:cli
 * [sshuttle](https://github.com/apenwarr/sshuttle)
