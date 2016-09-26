@@ -105,6 +105,10 @@ echo "install snippets"
   rake deploy_local
   cd ~/
 
+# http://stackoverflow.com/questions/13762280/zsh-compinit-insecure-directories
+echo "fix permissions for zsh completions"
+  compaudit | xargs chmod g-w
+
 echo "get better colour scheme for terminal"
   cd ~/development
   git clone git://github.com/altercation/solarized.git
