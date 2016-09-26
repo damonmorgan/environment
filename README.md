@@ -1,7 +1,7 @@
 Damon Morgan Environment
 ========================
 
-Environment is a script to get Max OS X set up as a development machine with all my preferences.
+Environment is a script to get OSX/macOS set up as a development machine with all my preferences.
 
 Prerequisites
 -------------
