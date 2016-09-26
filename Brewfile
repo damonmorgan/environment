@@ -5,6 +5,9 @@
 tap 'caskroom/cask'
 tap 'caskroom/versions'
 
+# brew services to manage redis, postgres, etc
+tap 'homebrew/services'
+
 # replace default openssl
 brew 'openssl'
 brew 'sshuttle'
