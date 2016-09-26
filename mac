@@ -18,7 +18,7 @@ echo "install xcode"
 echo "installing homebrew"
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
   # Make sure we’re using the latest Homebrew
-  brew update
+  brew update --verbose
   brew doctor
   # Upgrade any already-installed formulae
   brew upgrade
