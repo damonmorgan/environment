@@ -84,7 +84,7 @@ cask 'skype'
 cask 'spotify'
 #cask 'tinyumbrella'
 cask 'transmission-remote-gui'
-#cask 'truecrypt71a' #No available Cask for truecrypt71a
+#cask 'truecrypt71a' #No available Cask for truecrypt71a - http://apple.stackexchange.com/questions/173879/truecrypt-7-1a-requires-mac-os-x-10-4-or-later-on-yosemite-10-10
 cask 'cyberduck'
 cask 'android-file-transfer'
 cask 'gimp'
