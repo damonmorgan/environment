@@ -40,8 +40,7 @@ echo "post brew bundle"
   initdb /usr/local/var/postgres -E utf8
 
 echo "update pip"
-  pip install --upgrade setuptools
-  pip install --upgrade pip
+  pip install --upgrade pip setuptools
 
 echo "checking for SSH key, generating one if it doesn't exist ..."
   [[ -f ~/.ssh/id_rsa.pub ]] || ssh-keygen -t rsa -b 4096
