@@ -55,7 +55,7 @@ brew 'terminal-notifier'
 brew 'forego'
 
 # editor
-brew 'vim', args: ['override-system-vi']
+brew 'vim', args: ['with-override-system-vi']
 brew 'macvim'
 
 # development font
