@@ -32,6 +32,12 @@ cask 'java'
 brew 'go'
 brew 'scala'
 
+# database client tools and libs
+brew 'postgresql', args: ['no-python']
+brew 'redis'
+brew 'rabbitmq'
+brew 'memcached'
+
 # utils
 brew 'coreutils'
 brew 'ack'
