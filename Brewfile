@@ -5,9 +5,6 @@
 tap 'caskroom/cask'
 tap 'caskroom/versions'
 
-# brew services to manage redis, postgres, etc
-tap 'homebrew/services'
-
 # replace default openssl
 brew 'openssl'
 brew 'sshuttle'
@@ -34,12 +31,6 @@ brew 'python'
 cask 'java'
 brew 'go'
 brew 'scala'
-
-# databases
-brew 'postgresql', args: ['no-python']
-brew 'redis'
-brew 'rabbitmq'
-brew 'memcached'
 
 # utils
 brew 'coreutils'
@@ -98,5 +89,5 @@ cask 'google-drive'
 #cask 'amazon-cloud-drive' #No available Cask for amazon-cloud-drive
 #cask 'skydrive' #onedrive
 
-# docker
+# docker for mac
 cask 'docker'
