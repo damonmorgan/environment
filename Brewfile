@@ -93,7 +93,10 @@ cask 'ngrok'
 cask 'dropbox'
 cask 'google-drive'
 #cask 'amazon-cloud-drive' #No available Cask for amazon-cloud-drive
-#cask 'skydrive' #onedrive
 
 # docker for mac
 cask 'docker'
+
+# mac app store
+brew 'mas'
+mas 'OneDrive (17.3.6517)', id: 823766827
