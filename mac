@@ -83,11 +83,8 @@ echo "install standalone Heroku CLI client. You'll need administrative rights on
   wget -qO- https://toolbelt.heroku.com/install.sh | sh
 
 echo "install heroku plugins"
-  /usr/local/heroku/bin/heroku plugins:install git://github.com/ddollar/heroku-config.git
-  /usr/local/heroku/bin/heroku plugins:install git://github.com/heroku/heroku-pg-extras.git
-  /usr/local/heroku/bin/heroku plugins:install git://github.com/ddollar/heroku-redis-cli.git
-  /usr/local/heroku/bin/heroku plugins:install https://github.com/heroku/heroku-oauth
-  /usr/local/heroku/bin/heroku plugins:install heroku-docker
+  /usr/local/heroku/bin/heroku plugins:install heroku-pg-extras
+  /usr/local/heroku/bin/heroku plugins:install heroku-cli-oauth
 
 echo "init Vundle and install"
   git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
