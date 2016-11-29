@@ -149,15 +149,12 @@ echo "opening apps for configuration"
   open -a Flux
   read -p "Press any key to continue... " -n1 -s
 
-echo "set osx preferences"
+echo "set macos preferences"
 # from ~/.osx — http://mths.be/osx
 
 ###############################################################################
 # General UI/UX                                                               #
 ###############################################################################
-
-echo "Set standby delay to 2 hours (default is 1 hour)"
-sudo pmset -a standbydelay 7200
 
 echo "Disable the sound effects on boot"
 sudo nvram SystemAudioVolume=" "
@@ -178,9 +175,6 @@ defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
 
 echo "Disable Resume system-wide"
 defaults write NSGlobalDomain NSQuitAlwaysKeepsWindows -bool false
-
-echo "Never go into computer sleep mode"
-systemsetup -setcomputersleep Off > /dev/null
 
 echo "Disable Photos.app from starting everytime a device is plugged in"
 defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
@@ -224,21 +218,17 @@ echo "Turn on app auto-update"
 defaults write com.apple.commerce AutoUpdate -bool true
 
 ###############################################################################
-# SSD-specific tweaks                                                         #
+# Power tweaks                                                                #
 ###############################################################################
 
-echo "Disable local Time Machine snapshots"
-sudo tmutil disablelocal
+echo "Set Power Management for AC and Battery"
+sudo pmset -a displaysleep 20
+sudo pmset -a disksleep 20
+sudo pmset -b sleep 30
 
-echo "Disable hibernation (speeds up entering sleep mode)"
-sudo pmset -a hibernatemode 0
-
-echo "Remove the sleep image file to save disk space"
-sudo rm /Private/var/vm/sleepimage
-# Create a zero-byte file instead…
-sudo touch /Private/var/vm/sleepimage
-# …and make sure it can’t be rewritten
-sudo chflags uchg /Private/var/vm/sleepimage
+###############################################################################
+# SSD tweaks                                                                  #
+###############################################################################
 
 echo "Disable the sudden motion sensor as it’s not useful for SSDs"
 sudo pmset -a sms 0
@@ -264,8 +254,9 @@ defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
 echo "Disable the warning when changing a file extension"
 defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 
-echo "Avoid creating .DS_Store files on network volumes"
+echo "Avoid creating .DS_Store files on network or USB volumes"
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 
 echo "Set Downloads as the default location for new Finder windows"
 defaults write com.apple.finder NewWindowTarget -string "PfLo"
