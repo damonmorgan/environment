@@ -60,9 +60,6 @@ tap 'caskroom/fonts'
 cask 'font-inconsolata'
 cask 'font-inconsolata-for-powerline'
 
-cask 'xquartz'
-brew 'wine'
-
 # browsers
 cask 'google-chrome-dev'
 cask 'opera'
