@@ -3,11 +3,6 @@ Damon Morgan Environment
 
 Environment is a script to get OSX/macOS set up as a development machine with all my preferences.
 
-Prerequisites
--------------
-
-1) XCode (required to build MacVim)
-
 Installation
 ------------
 
@@ -16,6 +11,7 @@ Installation
 What is installed
 -----------------
 
+* Full XCode (required to build MacVim and for mobile app development)
 * Generate SSH public key (for authenticating with services like Github and Heroku)
 * [Homebrew](http://brew.sh/) and [Cask](http://caskroom.io/)
 * zsh with [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh) (preferred shell)
@@ -49,18 +45,3 @@ What is installed
 * [sshuttle](https://github.com/apenwarr/sshuttle)
 * [aws cli](http://aws.amazon.com/cli/)
 * [docker](http://boot2docker.io/)
-
-
-Post Install
-------------
-
-Configure iTerm to use the new Inconsolata Font and Solarized colourscheme
-(change profile preferences to Inconsolata for Powerline 14pt and Solarized Dark)
-
-Turn on FileVault
-
-
-Credits
--------
-
-![thoughtbot](http://thoughtbot.com/images/tm/logo.png)
