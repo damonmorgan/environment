@@ -5,6 +5,11 @@
 tap 'caskroom/cask'
 tap 'caskroom/versions'
 
+# mac app store
+brew 'mas'
+mas 'XCode', id: 497799835
+mas 'OneDrive', id: 823766827
+
 # replace default openssl
 brew 'openssl'
 brew 'sshuttle'
@@ -27,6 +32,7 @@ brew 'ruby-install'
 
 # other development languages
 brew 'node'
+brew 'yarn'
 brew 'python'
 cask 'java'
 brew 'go'
@@ -96,7 +102,3 @@ cask 'google-drive'
 
 # docker for mac
 cask 'docker'
-
-# mac app store
-brew 'mas'
-mas 'OneDrive (17.3.6517)', id: 823766827
