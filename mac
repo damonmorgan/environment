@@ -2,6 +2,16 @@
 
 if [[ -f $HOME/.zshrc ]]; then source $HOME/.zshrc; fi
 
+echo "checking for app store updates"
+if [[ -z $(softwareupdate -l 2>&1 | grep "No new software available.") ]]; then
+  echo "Installing software updates:"
+  sudo softwareupdate --install --all
+  #has xcode been updated?
+  if [[ -z $(/usr/bin/xcrun clang 2>&1 | grep "no input files") ]]; then
+    sudo xcodebuild -license
+  fi
+fi
+
 echo "upgrade system rubygem system to latest version"
   cd $HOME
   sudo gem update --system
@@ -9,7 +19,10 @@ echo "upgrade system rubygem system to latest version"
 
 if [[ -z $(which xcodebuild) ]]; then
   echo "install xcode command line tools"
-  sudo xcodebuild -license
+  #do we need to accept the xcode license?
+  if [[ -z $(/usr/bin/xcrun clang 2>&1 | grep "no input files") ]]; then
+    sudo xcodebuild -license
+  fi
   xcode-select --install
   read -p "Press any key to continue... " -n1 -s
 fi
