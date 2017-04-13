@@ -1,153 +1,180 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
-# Ask for the administrator password upfront
-sudo -v
+if [[ -f $HOME/.zshrc ]]; then source $HOME/.zshrc; fi
 
-# Keep-alive: update existing `sudo` time stamp until this script has finished
-while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
-
-echo "upgrade base gem system to latest version"
+echo "upgrade system rubygem system to latest version"
+  cd $HOME
   sudo gem update --system
   sudo gem clean
 
-echo "install xcode"
+if [[ -z $(which xcodebuild) ]]; then
+  echo "install xcode command line tools"
   sudo xcodebuild -license
   xcode-select --install
   read -p "Press any key to continue... " -n1 -s
+fi
 
-echo "installing homebrew"
+if [[ -z $(which brew) ]]; then
+  echo "installing homebrew"
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+fi
+
+echo "update homebrew apps"
   # Make sure we’re using the latest Homebrew
   brew update --verbose
   brew doctor
   # Upgrade any already-installed formulae
+  brew outdated
   brew upgrade
-  brew install wget
-  wget https://raw.githubusercontent.com/damonmorgan/environment/master/Brewfile -O ~/Brewfile
-  brew tap Homebrew/bundle
+  if [[ -z $(brew list | grep wget) ]]; then
+    brew install wget
+    brew tap Homebrew/bundle
+  fi
+  wget https://raw.githubusercontent.com/damonmorgan/environment/master/Brewfile -O $HOME/Brewfile
   brew bundle --verbose
+  brew link curl --force
   # Remove outdated versions from the cellar
   brew cleanup
   brew cask cleanup
 
-echo "add homebrew zsh to shells"
+if [[ -z $(which zsh | grep '/usr/local/bin/zsh') ]]; then
+  echo "add homebrew zsh to shells"
   sudo sh -c 'echo "/usr/local/bin/zsh" >> /etc/shells'
+fi
 
-echo "post brew bundle"
-  brew link curl --force
-  #brew link openssl --force #homebrew doesn't allow this anymore
-
-echo "docker containers"
+if [[ -z $(pgrep -x Docker) ]]; then
+  echo "docker containers"
   open -a Docker
   read -p "Press any key to continue... " -n1 -s
   docker run -d --name="postgres" --restart=unless-stopped -e POSTGRES_USER=$USER -p 5432:5432 postgres
   docker run -d --name="redis" --restart=unless-stopped -p 6379:6379 redis
   docker run -d --name="rabbitmq" --restart=unless-stopped -p 4369:4369 -p 5671:5671 -p 5672:5672 -p 25672:25672 -p 15671:15671 -p 15672:15672 rabbitmq:management
   docker run -d --name="memcached" --restart=unless-stopped -p 11211:11211 memcached
+fi
 
-echo "update pip"
-  pip install --upgrade pip setuptools
+echo "checking for SSH key, generating one if it doesn't exist and add to github ..."
+  if [[ ! -f $HOME/.ssh/id_rsa.pub ]]; then
+    ssh-keygen -t rsa -b 4096
+    cat $HOME/.ssh/id_rsa.pub | pbcopy
+    open https://github.com/account/ssh
+    read -p "Press any key once you have pasted into your Github account..." -n1 -s
+  fi
 
-echo "checking for SSH key, generating one if it doesn't exist ..."
-  [[ -f ~/.ssh/id_rsa.pub ]] || ssh-keygen -t rsa -b 4096
-
-echo "copying public key to clipboard. Paste it into your Github account ..."
-  [[ -f ~/.ssh/id_rsa.pub ]] && cat ~/.ssh/id_rsa.pub | pbcopy
-  open https://github.com/account/ssh
-  read -p "Press any key once you have pasted into your Github account..." -n1 -s
-
-echo "install prey"
+if [[ -z $(brew cask list | grep 'prey') ]]; then
+  echo "install prey"
   open https://panel.preyproject.com/settings
   echo "Type your prey apikey found on your profile page, followed by [ENTER]:"
   read apikey
   API_KEY="$apikey" brew cask install prey
+fi
 
-echo "fetch dotfiles"
-  git clone git@github.com:damonmorgan/dotfiles.git ~/.dotfiles
-
-echo "install dotfiles"
-  cd ~/.dotfiles
+if [[ ! -f $HOME/.dotfiles/zshrc ]]; then
+  echo "install dotfiles"
+  git clone git@github.com:damonmorgan/dotfiles.git $HOME/.dotfiles
+  cd $HOME/.dotfiles
   rake install
-  cd ~/
+fi
 
-echo "install docker completions"
-  cd ~/.zsh
-  mkdir completions
-  cd ~/
-  wget https://raw.githubusercontent.com/docker/docker/master/contrib/completion/zsh/_docker -O ~/.zsh/completions/_docker
-  wget https://raw.githubusercontent.com/docker/machine/master/contrib/completion/zsh/_docker-machine -O ~/.zsh/completions/_docker-machine
-  wget https://raw.githubusercontent.com/docker/compose/master/contrib/completion/zsh/_docker-compose -O ~/.zsh/completions/_docker-compose
+echo "docker zsh completions"
+  if [[ ! -d $HOME/.zsh/completions ]]; then
+    cd $HOME/.zsh
+    mkdir completions
+  fi
+  wget https://raw.githubusercontent.com/docker/docker/master/contrib/completion/zsh/_docker -O $HOME/.zsh/completions/_docker
+  wget https://raw.githubusercontent.com/docker/machine/master/contrib/completion/zsh/_docker-machine -O $HOME/.zsh/completions/_docker-machine
+  wget https://raw.githubusercontent.com/docker/compose/master/contrib/completion/zsh/_docker-compose -O $HOME/.zsh/completions/_docker-compose
+  rm $HOME/.zcompdump*
 
-
-echo "install standalone Heroku CLI client. You'll need administrative rights on your machine ..."
+if [[ -z $(which heroku | grep '/usr/local/heroku/bin/heroku') ]]; then
+  echo "install standalone Heroku CLI client. You'll need administrative rights on your machine ..."
   wget -qO- https://toolbelt.heroku.com/install.sh | sh
+fi
 
-echo "install heroku plugins"
-  /usr/local/heroku/bin/heroku plugins:install heroku-pg-extras
-  /usr/local/heroku/bin/heroku plugins:install heroku-cli-oauth
+echo "heroku plugins"
+  if [[ -z $(/usr/local/heroku/bin/heroku plugins | grep 'heroku-pg-extras') ]]; then
+    /usr/local/heroku/bin/heroku plugins:install heroku-pg-extras
+    /usr/local/heroku/bin/heroku plugins:install heroku-cli-oauth
+    /usr/local/heroku/bin/heroku plugins:install heroku-ci
+  else
+    /usr/local/heroku/bin/heroku plugins:update
+  fi
 
-echo "init Vundle and install"
-  git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-  vim +PluginInstall +qall
+echo "vim Vundle"
+  if [[ ! -d $HOME/.vim/bundle/Vundle.vim ]]; then
+    git clone https://github.com/VundleVim/Vundle.vim.git $HOME/.vim/bundle/Vundle.vim
+    vim +PluginInstall +qall
+  else
+    vundle-update
+  fi
 
-echo "build Command-T plugin"
-  cd ~/.vim/bundle/command-t
+if [[ ! -f $HOME/.vim/bundle/command-t/ruby/command-t/metadata.rb ]]; then
+  echo "build Command-T plugin"
+  cd $HOME/.vim/bundle/command-t
   rake make
-  cd ~/
+fi
 
-echo "create development directory"
-  cd ~/
+if [[ ! -d $HOME/development ]]; then
+  echo "create development directory"
+  cd $HOME
   mkdir development
+fi
 
-echo "install snippets"
-  cd ~/development
-  git clone git://github.com/scrooloose/snipmate-snippets.git
-  sed -i -e 's/snipmate/snipmate.vim/g' snipmate-snippets/Rakefile
-  cd ~/development/snipmate-snippets
+if [[ ! -d $HOME/development/snipmate-snippets ]]; then
+  echo "install snippets"
+  git clone git://github.com/scrooloose/snipmate-snippets.git $HOME/development/snipmate-snippets
+  sed -i -e 's/snipmate/snipmate.vim/g' $HOME/development/snipmate-snippets/Rakefile
+  cd $HOME/development/snipmate-snippets
   rake deploy_local
-  cd ~/
+fi
 
 # http://stackoverflow.com/questions/13762280/zsh-compinit-insecure-directories
 echo "fix permissions for zsh completions"
   compaudit | xargs chmod g-w
 
-echo "get better colour scheme for terminal"
-  cd ~/development
-  git clone git://github.com/altercation/solarized.git
-  cd ~/
-
-echo "Install the Solarized Dark theme for iTerm2"
-  cd ~
-  open "development/solarized/iterm2-colors-solarized/Solarized Dark.itermcolors"
+if [[ ! -d $HOME/development/solarized ]]; then
+  echo "better colour scheme for terminals"
+  git clone git://github.com/altercation/solarized.git $HOME/development/solarized
+  open "$HOME/development/solarized/iterm2-colors-solarized/Solarized Dark.itermcolors"
   read -p "Press any key to continue... " -n1 -s
+fi
 
-echo "Don’t display the annoying prompt when quitting iTerm"
+if [[ -z $(defaults read com.googlecode.iterm2 | grep 'd326c889-7564-409b-8b26-d3671001617e') ]]; then
+  echo "configure iTerm"
   defaults write com.googlecode.iterm2 PromptOnQuit -bool false
-
-echo "Check for iTerm updates automatically"
   defaults write com.googlecode.iterm2 SUEnableAutomaticChecks -bool true
-
-echo "setup iTerm2 DynamicProfile and make default"
-  wget https://raw.githubusercontent.com/damonmorgan/environment/master/iTerm2/DynamicProfiles/inconsolarized.json -O ~/Library/Application\ Support/iTerm2/DynamicProfiles/inconsolarized.json
+  wget https://raw.githubusercontent.com/damonmorgan/environment/master/iTerm2/DynamicProfiles/inconsolarized.json -O $HOME/Library/Application\ Support/iTerm2/DynamicProfiles/inconsolarized.json
   defaults write com.googlecode.iterm2 "Default Bookmark Guid" "d326c889-7564-409b-8b26-d3671001617e"
+fi
 
 echo "latest ruby"
-  cd ~/development
-  ruby_version="$(curl -s https://raw.githubusercontent.com/postmodern/ruby-versions/master/ruby/stable.txt | tail -1)"
-  ruby-install "ruby $ruby_version"
-  rm -rf ~/src
-  echo "$ruby_version" > .ruby-version
   source $(brew --prefix chruby)/share/chruby/chruby.sh
   source $(brew --prefix chruby)/share/chruby/auto.sh
-  cd ~/development
-  gem update --system
-  gem clean
-  gem install bundler --no-document
-  cd ~/
+  cd $HOME/development
+  ruby_latest_version="$(curl -s https://raw.githubusercontent.com/postmodern/ruby-versions/master/ruby/stable.txt | tail -1)"
+  ruby_current_version="$(cat .ruby-version)"
+  if [[ $ruby_latest_version = $ruby_current_version ]]; then
+    echo "Latest ruby installed - Updating rubygems"
+    gem update --system
+    gem update bundler
+    gem clean
+  else
+    ruby-install "ruby $ruby_latest_version"
+    rm -rf $HOME/src
+    rm -rf $HOME/.rubies/ruby-$ruby_current_version
+    echo "$ruby_latest_version" > .ruby-version
+    source $(brew --prefix chruby)/share/chruby/chruby.sh
+    source $(brew --prefix chruby)/share/chruby/auto.sh
+    cd $HOME/development
+    gem update --system
+    gem clean
+    gem install bundler --no-document
+  fi
 
-echo "opening apps for configuration"
+if [[ -z $(pgrep -x Flux) ]]; then
+  echo "opening apps for configuration"
   open -a Flux
   read -p "Press any key to continue... " -n1 -s
+fi
 
 echo "set macos preferences"
 # from ~/.osx — http://mths.be/osx
