@@ -20,10 +20,9 @@ What is installed
   * [git-extras](https://github.com/visionmedia/git-extras)
   * [gitx](http://gitx.laullon.com/)
 * development environment version managers
-  * [rbenv](https://github.com/sstephenson/rbenv), ruby-build
-  * [nvm](https://github.com/creationix/nvm) (not using yet)
+  * [chruby](https://github.com/postmodern/chruby), [ruby-install](https://github.com/postmodern/ruby-install)
 * development languages
-  * ruby, node, python, java, go, scala
+  * ruby, node (with yarn), python, java, go, scala, elixir
 * 'databases'
   * postgresql, redis, rabbitmq, memcached
 * utilities (openssl, ack, silver searcher, [fasd](https://github.com/clvv/fasd), wget, curl, [ngrok](https://ngrok.com/))
@@ -36,12 +35,10 @@ What is installed
 * browsers
   * chrome dev channel, opera, firefox
 * apps
-  * virtualbox, atom, dropbox, etc.
+  * flux, virtualbox, atom, dropbox, etc.
 * [dotfiles](https://github.com/damonmorgan/dotfiles) (preferred configuration)
 * [Heroku Toolbelt](https://toolbelt.heroku.com/)
-  * [config plugin](https://github.com/ddollar/heroku-config) for local `ENV` variables
   * [pg-extras plugin](https://github.com/heroku/heroku-pg-extras) heroku pg:index-size
-  * [redis:cli plugin](https://github.com/ddollar/heroku-redis-cli) heroku redis:cli
-* [sshuttle](https://github.com/apenwarr/sshuttle)
+* [sshuttle](https://github.com/sshuttle/sshuttle)
 * [aws cli](http://aws.amazon.com/cli/)
-* [docker](http://boot2docker.io/)
+* [docker for mac](https://docs.docker.com/docker-for-mac/)
