@@ -12,11 +12,6 @@ if [[ -z $(softwareupdate -l 2>&1 | grep "No new software available.") ]]; then
   fi
 fi
 
-echo "upgrade system rubygem system to latest version"
-  cd $HOME
-  sudo gem update --system
-  sudo gem clean
-
 if [[ -z $(which xcodebuild) ]]; then
   echo "install xcode command line tools"
   #do we need to accept the xcode license?
