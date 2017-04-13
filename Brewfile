@@ -37,6 +37,7 @@ brew 'python'
 cask 'java'
 brew 'go'
 brew 'scala'
+brew 'elixir'
 
 # database client tools and libs
 brew 'postgresql', args: ['no-python']
@@ -72,7 +73,6 @@ cask 'opera'
 cask 'opera-developer'
 cask 'firefox'
 cask 'firefoxdeveloperedition'
-#cask 'lastpass'
 
 # apps
 cask 'virtualbox'
@@ -82,15 +82,13 @@ cask 'atom'
 cask 'calibre'
 cask 'crashplan'
 cask 'flux'
-#cask 'skitch'
 cask 'skype'
 cask 'spotify'
-#cask 'tinyumbrella'
 cask 'transmission-remote-gui'
 #cask 'truecrypt71a' #No available Cask for truecrypt71a - http://apple.stackexchange.com/questions/173879/truecrypt-7-1a-requires-mac-os-x-10-4-or-later-on-yosemite-10-10
 cask 'cyberduck'
 cask 'android-file-transfer'
-cask 'gimp'
+#cask 'gimp'
 #cask 'microsoft-office365'
 #cask 'steam'
 cask 'ngrok'
@@ -98,7 +96,7 @@ cask 'ngrok'
 # drives
 cask 'dropbox'
 cask 'google-drive'
-#cask 'amazon-cloud-drive' #No available Cask for amazon-cloud-drive
+cask 'amazon-drive'
 
 # docker for mac
 cask 'docker'
