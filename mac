@@ -38,7 +38,7 @@ echo "update homebrew apps"
     brew install wget
     brew tap Homebrew/bundle
   fi
-  wget https://raw.githubusercontent.com/damonmorgan/environment/master/Brewfile -O $HOME/Brewfile
+  wget -nv https://raw.githubusercontent.com/damonmorgan/environment/master/Brewfile -O $HOME/Brewfile
   brew bundle --verbose
   brew link curl --force
   # Remove outdated versions from the cellar
@@ -88,9 +88,9 @@ echo "docker zsh completions"
     cd $HOME/.zsh
     mkdir completions
   fi
-  wget https://raw.githubusercontent.com/docker/docker/master/contrib/completion/zsh/_docker -O $HOME/.zsh/completions/_docker
-  wget https://raw.githubusercontent.com/docker/machine/master/contrib/completion/zsh/_docker-machine -O $HOME/.zsh/completions/_docker-machine
-  wget https://raw.githubusercontent.com/docker/compose/master/contrib/completion/zsh/_docker-compose -O $HOME/.zsh/completions/_docker-compose
+  wget -nv https://raw.githubusercontent.com/docker/docker/master/contrib/completion/zsh/_docker -O $HOME/.zsh/completions/_docker
+  wget -nv https://raw.githubusercontent.com/docker/machine/master/contrib/completion/zsh/_docker-machine -O $HOME/.zsh/completions/_docker-machine
+  wget -nv https://raw.githubusercontent.com/docker/compose/master/contrib/completion/zsh/_docker-compose -O $HOME/.zsh/completions/_docker-compose
   rm $HOME/.zcompdump*
 
 if [[ -z $(which heroku | grep '/usr/local/heroku/bin/heroku') ]]; then
@@ -150,7 +150,7 @@ if [[ -z $(defaults read com.googlecode.iterm2 | grep 'd326c889-7564-409b-8b26-d
   echo "configure iTerm"
   defaults write com.googlecode.iterm2 PromptOnQuit -bool false
   defaults write com.googlecode.iterm2 SUEnableAutomaticChecks -bool true
-  wget https://raw.githubusercontent.com/damonmorgan/environment/master/iTerm2/DynamicProfiles/inconsolarized.json -O $HOME/Library/Application\ Support/iTerm2/DynamicProfiles/inconsolarized.json
+  wget -nv https://raw.githubusercontent.com/damonmorgan/environment/master/iTerm2/DynamicProfiles/inconsolarized.json -O $HOME/Library/Application\ Support/iTerm2/DynamicProfiles/inconsolarized.json
   defaults write com.googlecode.iterm2 "Default Bookmark Guid" "d326c889-7564-409b-8b26-d3671001617e"
 fi
 
