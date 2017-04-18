@@ -91,7 +91,11 @@ echo "docker zsh completions"
   wget -nv https://raw.githubusercontent.com/docker/docker/master/contrib/completion/zsh/_docker -O $HOME/.zsh/completions/_docker
   wget -nv https://raw.githubusercontent.com/docker/machine/master/contrib/completion/zsh/_docker-machine -O $HOME/.zsh/completions/_docker-machine
   wget -nv https://raw.githubusercontent.com/docker/compose/master/contrib/completion/zsh/_docker-compose -O $HOME/.zsh/completions/_docker-compose
-  rm $HOME/.zcompdump*
+
+# http://stackoverflow.com/questions/13762280/zsh-compinit-insecure-directories
+echo "fix permissions for zsh completions"
+  compaudit | xargs chmod go-w
+  rm -f $HOME/.zcompdump*; compinit
 
 if [[ -z $(which heroku | grep '/usr/local/heroku/bin/heroku') ]]; then
   echo "install standalone Heroku CLI client. You'll need administrative rights on your machine ..."
@@ -134,10 +138,6 @@ if [[ ! -d $HOME/development/snipmate-snippets ]]; then
   cd $HOME/development/snipmate-snippets
   rake deploy_local
 fi
-
-# http://stackoverflow.com/questions/13762280/zsh-compinit-insecure-directories
-echo "fix permissions for zsh completions"
-  compaudit | xargs chmod g-w
 
 if [[ ! -d $HOME/development/solarized ]]; then
   echo "better colour scheme for terminals"
