@@ -169,6 +169,7 @@ echo "latest ruby"
     ruby-install "ruby $ruby_latest_version"
     rm -rf $HOME/src
     rm -rf $HOME/.rubies/ruby-$ruby_current_version
+    rm -rf $HOME/.gem/ruby/$ruby_current_version
     echo "$ruby_latest_version" > .ruby-version
     source $(brew --prefix chruby)/share/chruby/chruby.sh
     source $(brew --prefix chruby)/share/chruby/auto.sh
