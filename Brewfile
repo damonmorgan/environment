@@ -93,6 +93,7 @@ cask 'android-file-transfer'
 #cask 'microsoft-office365'
 #cask 'steam'
 cask 'ngrok'
+cask 'vanilla'
 
 # drives
 cask 'dropbox'
