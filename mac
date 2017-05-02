@@ -34,9 +34,6 @@ echo "update homebrew apps"
   # Upgrade any already installed formulae
   brew outdated
   brew upgrade
-  # upgrade any already installed casks
-  brew cask outdated
-  brew cask upgrade
   if [[ -z $(brew list | grep wget) ]]; then
     brew install wget
     brew tap Homebrew/bundle
@@ -324,5 +321,9 @@ defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
 
 echo "Disable local Time Machine backups"
 hash tmutil &> /dev/null && sudo tmutil disablelocal
+
+
+# list casks that are outdated
+brew cask outdated
 
 echo "Done. Note that some of these changes require a logout/restart to take effect."
