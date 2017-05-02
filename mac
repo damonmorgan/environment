@@ -31,9 +31,12 @@ echo "update homebrew apps"
   # Make sure we’re using the latest Homebrew
   brew update --verbose
   brew doctor
-  # Upgrade any already-installed formulae
+  # Upgrade any already installed formulae
   brew outdated
   brew upgrade
+  # upgrade any already installed casks
+  brew cask outdated
+  brew cask upgrade
   if [[ -z $(brew list | grep wget) ]]; then
     brew install wget
     brew tap Homebrew/bundle
