@@ -324,6 +324,10 @@ hash tmutil &> /dev/null && sudo tmutil disablelocal
 
 
 # list casks that are outdated
+echo ""
+echo "####################### Outdated Casks ######################"
 brew cask outdated
+echo "#############################################################"
+echo ""
 
 echo "Done. Note that some of these changes require a logout/restart to take effect."
