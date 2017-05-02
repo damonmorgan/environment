@@ -12,6 +12,8 @@ mas 'OneDrive', id: 823766827
 
 # replace default openssl
 brew 'openssl'
+
+# transparent proxy meets VPN meets ssh
 brew 'sshuttle'
 
 # shell
@@ -26,13 +28,14 @@ brew 'git', args: ['without-completions']
 brew 'git-extras'
 cask 'rowanj-gitx'
 
-# ruby version manager
+## development languages
+# ruby with version manager
 brew 'chruby'
 brew 'ruby-install'
-
-# other development languages
+# node
 brew 'node'
 brew 'yarn'
+# other
 brew 'python'
 cask 'java'
 brew 'go'
@@ -47,13 +50,11 @@ brew 'memcached'
 
 # utils
 brew 'coreutils'
-brew 'ack'
-brew 'the_silver_searcher'
+brew 'ripgrep'
 brew 'fasd'
 brew 'wget'
 brew 'curl'
 brew 'ccat'
-
 brew 'awscli'
 brew 'terminal-notifier'
 brew 'forego'
