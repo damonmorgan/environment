@@ -27,6 +27,7 @@ cask 'iterm2'
 brew 'git', args: ['without-completions']
 brew 'git-extras'
 cask 'rowanj-gitx'
+cask 'gitup'
 
 ## development languages
 # ruby with version manager
