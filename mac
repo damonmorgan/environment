@@ -106,7 +106,6 @@ echo "heroku plugins"
   if [[ -z $(/usr/local/heroku/bin/heroku plugins | grep 'heroku-pg-extras') ]]; then
     /usr/local/heroku/bin/heroku plugins:install heroku-pg-extras
     /usr/local/heroku/bin/heroku plugins:install heroku-cli-oauth
-    /usr/local/heroku/bin/heroku plugins:install heroku-ci
   else
     /usr/local/heroku/bin/heroku plugins:update
   fi
