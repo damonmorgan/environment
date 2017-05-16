@@ -63,13 +63,13 @@ else
   docker rm rabbitmq
   docker rm memcached
   docker pull redis
-  docker pull rabbitmq
+  docker pull rabbitmq:management
   docker pull memcached
 fi
 docker run -d --name="redis" --restart=unless-stopped -p 6379:6379 redis
 docker run -d --name="rabbitmq" --restart=unless-stopped -p 4369:4369 -p 5671:5671 -p 5672:5672 -p 25672:25672 -p 15671:15671 -p 15672:15672 rabbitmq:management
 docker run -d --name="memcached" --restart=unless-stopped -p 11211:11211 memcached
-docker system prune --force
+docker system prune --force --all
 
 echo "checking for SSH key, generating one if it doesn't exist and add to github ..."
   if [[ ! -f $HOME/.ssh/id_rsa.pub ]]; then
