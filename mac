@@ -59,6 +59,9 @@ else
   docker stop redis
   docker stop rabbitmq
   docker stop memcached
+  docker rm redis
+  docker rm rabbitmq
+  docker rm memcached
   docker pull redis
   docker pull rabbitmq
   docker pull memcached
