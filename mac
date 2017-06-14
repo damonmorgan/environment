@@ -115,6 +115,8 @@ echo "fix permissions for zsh completions"
 if [[ -z $(which heroku | grep '/usr/local/heroku/bin/heroku') ]]; then
   echo "install standalone Heroku CLI client. You'll need administrative rights on your machine ..."
   wget -qO- https://toolbelt.heroku.com/install.sh | sh
+else
+  /usr/local/heroku/bin/heroku update
 fi
 
 echo "heroku plugins"
