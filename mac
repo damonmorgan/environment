@@ -103,7 +103,7 @@ echo "docker zsh completions"
     cd $HOME/.zsh
     mkdir completions
   fi
-  wget -nv https://raw.githubusercontent.com/docker/docker/master/contrib/completion/zsh/_docker -O $HOME/.zsh/completions/_docker
+  wget -nv https://raw.githubusercontent.com/docker/cli/master/contrib/completion/zsh/_docker -O $HOME/.zsh/completions/_docker
   wget -nv https://raw.githubusercontent.com/docker/machine/master/contrib/completion/zsh/_docker-machine -O $HOME/.zsh/completions/_docker-machine
   wget -nv https://raw.githubusercontent.com/docker/compose/master/contrib/completion/zsh/_docker-compose -O $HOME/.zsh/completions/_docker-compose
 
