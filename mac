@@ -112,19 +112,12 @@ echo "fix permissions for zsh completions"
   compaudit | xargs chmod go-w
   rm -f $HOME/.zcompdump*; compinit
 
-if [[ -z $(which heroku | grep '/usr/local/heroku/bin/heroku') ]]; then
-  echo "install standalone Heroku CLI client. You'll need administrative rights on your machine ..."
-  wget -qO- https://toolbelt.heroku.com/install.sh | sh
-else
-  /usr/local/heroku/bin/heroku update
-fi
-
 echo "heroku plugins"
-  if [[ -z $(/usr/local/heroku/bin/heroku plugins | grep 'heroku-pg-extras') ]]; then
-    /usr/local/heroku/bin/heroku plugins:install heroku-pg-extras
-    /usr/local/heroku/bin/heroku plugins:install heroku-cli-oauth
+  if [[ -z $(/usr/local/bin/heroku plugins | grep 'heroku-pg-extras') ]]; then
+    /usr/local/bin/heroku plugins:install heroku-pg-extras
+    /usr/local/bin/heroku plugins:install heroku-cli-oauth
   else
-    /usr/local/heroku/bin/heroku plugins:update
+    /usr/local/bin/heroku plugins:update
   fi
 
 echo "vim Vundle"

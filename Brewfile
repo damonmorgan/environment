@@ -60,6 +60,9 @@ brew 'awscli'
 brew 'terminal-notifier'
 brew 'forego'
 
+# heroku
+brew 'heroku'
+
 # editor
 brew 'vim', args: ['with-override-system-vi']
 brew 'macvim'
