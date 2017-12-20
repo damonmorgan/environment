@@ -54,7 +54,7 @@ brew 'coreutils'
 brew 'ripgrep'
 brew 'fasd'
 brew 'wget'
-brew 'curl'
+brew 'curl', args: ['with-nghttp2']
 brew 'ccat'
 brew 'awscli'
 brew 'terminal-notifier'
