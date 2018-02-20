@@ -1,0 +1,42 @@
+version: "3.5"
+
+services:
+
+  redis:
+    container_name: redis
+    image: redis
+    ports:
+      - "6379:6379"
+    restart: unless-stopped
+
+  rabbitmq:
+    container_name: rabbitmq
+    image: rabbitmq:management
+    ports:
+      - "4369:4369"
+      - "5671:5671"
+      - "5672:5672"
+      - "25672:25672"
+      - "15671:15671"
+      - "15672:15672"
+    restart: unless-stopped
+
+  memcached:
+    container_name: memcached
+    image: memcached
+    ports:
+      - "11211:11211"
+    restart: unless-stopped
+
+  postgres:
+    container_name: postgres
+    image: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: ${USER}
+    restart: unless-stopped
+
+volumes: pgdata

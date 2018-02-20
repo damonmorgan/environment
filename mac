@@ -54,26 +54,12 @@ if [[ -z $(pgrep -x Docker) ]]; then
   echo "docker containers"
   open -a Docker
   read -p "Press any key to continue... " -n1 -s
-  docker volume create pgdata
-else
-  docker stop redis
-  docker stop rabbitmq
-  docker stop memcached
-  docker stop postgres
-  docker rm redis
-  docker rm rabbitmq
-  docker rm memcached
-  docker rm postgres
-  docker pull redis
-  docker pull rabbitmq:management
-  docker pull memcached
-  docker pull postgres
 fi
-docker run -d --name="redis" --restart=unless-stopped -p 6379:6379 redis
-docker run -d --name="rabbitmq" --restart=unless-stopped -p 4369:4369 -p 5671:5671 -p 5672:5672 -p 25672:25672 -p 15671:15671 -p 15672:15672 rabbitmq:management
-docker run -d --name="memcached" --restart=unless-stopped -p 11211:11211 memcached
-docker run -d --name="postgres" --restart=unless-stopped -v pgdata:/var/lib/postgresql/data -e POSTGRES_USER=$USER -p 5432:5432 postgres
+wget -nv https://raw.githubusercontent.com/damonmorgan/environment/master/docker-compose.yml -O $HOME/docker-compose.yml
+docker-compose pull
+docker-compose up -d
 docker system prune --force --all
+docker volume prune --force
 
 echo "checking for SSH key, generating one if it doesn't exist and add to github ..."
   if [[ ! -f $HOME/.ssh/id_rsa.pub ]]; then
