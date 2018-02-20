@@ -39,4 +39,5 @@ services:
       POSTGRES_USER: ${USER}
     restart: unless-stopped
 
-volumes: pgdata
+volumes:
+  pgdata:
