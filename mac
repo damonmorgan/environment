@@ -44,6 +44,7 @@ echo "update homebrew apps"
   # Remove outdated versions from the cellar
   brew cleanup
   brew cask cleanup
+  brew prune
 
 if [[ -z $(which zsh | grep '/usr/local/bin/zsh') ]]; then
   echo "add homebrew zsh to shells"
