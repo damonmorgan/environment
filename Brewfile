@@ -81,6 +81,7 @@ cask 'firefoxdeveloperedition'
 
 # apps
 cask 'virtualbox'
+cask 'virtualbox-extension-pack'
 cask 'rdm'
 cask 'vlc'
 cask 'atom'
