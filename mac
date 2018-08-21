@@ -109,7 +109,6 @@ echo "fix permissions for zsh completions"
 echo "heroku plugins"
   if [[ -z $(/usr/local/bin/heroku plugins | grep 'heroku-pg-extras') ]]; then
     /usr/local/bin/heroku plugins:install heroku-pg-extras
-    /usr/local/bin/heroku plugins:install heroku-cli-autocomplete
     heroku autocomplete
   else
     /usr/local/bin/heroku update
