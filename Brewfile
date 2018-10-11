@@ -15,6 +15,7 @@ brew 'openssl'
 
 # transparent proxy meets VPN meets ssh
 brew 'sshuttle'
+brew 'wireguard-tools'
 
 # shell
 brew 'zsh'
