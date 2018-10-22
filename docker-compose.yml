@@ -30,7 +30,7 @@ services:
 
   postgres:
     container_name: postgres
-    image: postgres
+    image: postgres:10
     ports:
       - "5432:5432"
     volumes:
