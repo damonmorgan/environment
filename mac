@@ -50,7 +50,6 @@ echo "update homebrew apps"
   brew link curl --force
   # Remove outdated versions from the cellar
   brew cleanup
-  brew cask cleanup
   brew prune
 
 if [[ -z $(which zsh | grep '/usr/local/bin/zsh') ]]; then
