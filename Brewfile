@@ -27,7 +27,6 @@ cask 'iterm2'
 # git
 brew 'git', args: ['without-completions']
 brew 'git-extras'
-cask 'rowanj-gitx'
 cask 'gitup'
 
 ## development languages
@@ -97,7 +96,7 @@ cask 'android-file-transfer'
 #cask 'gimp'
 #cask 'microsoft-office365'
 #cask 'steam'
-cask 'ngrok'
+#cask 'ngrok'
 cask 'vanilla'
 
 # drives
