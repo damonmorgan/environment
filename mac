@@ -266,9 +266,9 @@ defaults write com.apple.commerce AutoUpdate -bool true
 ###############################################################################
 
 echo "Set Power Management for AC and Battery"
-sudo pmset -a displaysleep 20
-sudo pmset -a disksleep 20
-sudo pmset -b sleep 30
+#sudo pmset -a displaysleep 20
+#sudo pmset -a disksleep 20
+#sudo pmset -b sleep 30
 
 ###############################################################################
 # SSD tweaks                                                                  #
