@@ -68,6 +68,13 @@ docker-compose up -d
 docker system prune --force --all
 docker volume prune --force
 
+echo "checking for SSH key, try to restore from secrets if it doesn't exist..."
+  if [[ ! -f $HOME/.ssh/id_rsa.pub ]]; then
+    rake secrets:install
+  else
+    rake secrets:backup
+  fi
+
 echo "checking for SSH key, generating one if it doesn't exist and add to github ..."
   if [[ ! -f $HOME/.ssh/id_rsa.pub ]]; then
     ssh-keygen -t rsa -b 4096
