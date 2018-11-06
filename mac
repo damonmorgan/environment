@@ -2,7 +2,7 @@
 
 if [[ -f $HOME/.zshrc ]]; then source $HOME/.zshrc; fi
 
-mkdir -p macenv
+mkdir -p macenv/secrets
 
 echo "use cloudflare and google for DNS"
 if [[ -z $(networksetup -getdnsservers Wi-Fi 2>&1 | grep "1.0.0.1") ]]; then
