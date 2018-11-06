@@ -45,7 +45,8 @@ echo "update homebrew apps"
     brew install wget
     brew tap Homebrew/bundle
   fi
-  wget -nv https://raw.githubusercontent.com/damonmorgan/environment/master/Brewfile -O $HOME/Brewfile
+  wget -nv https://raw.githubusercontent.com/damonmorgan/environment/master/Brewfile -O $HOME/macenv/Brewfile
+  cd $HOME/macenv
   brew bundle --verbose
   brew link curl --force
   # Remove outdated versions from the cellar
@@ -62,13 +63,17 @@ if [[ -z $(pgrep -x Docker) ]]; then
   open -a Docker
   read -p "Press any key to continue... " -n1 -s
 fi
-wget -nv https://raw.githubusercontent.com/damonmorgan/environment/master/docker-compose.yml -O $HOME/docker-compose.yml
+wget -nv https://raw.githubusercontent.com/damonmorgan/environment/master/docker-compose.yml -O $HOME/macenv/docker-compose.yml
+cd $HOME/macenv
 docker-compose pull
 docker-compose up -d
 docker system prune --force --all
 docker volume prune --force
 
 echo "checking for SSH key, try to restore from secrets if it doesn't exist..."
+  wget -nv https://raw.githubusercontent.com/damonmorgan/environment/master/Rakefile -O $HOME/macenv/Rakefile
+  wget -nv https://raw.githubusercontent.com/damonmorgan/environment/master/secrets/secrets.rake -O $HOME/macenv/secrets/secrets.rake
+  cd $HOME/macenv
   if [[ ! -f $HOME/.ssh/id_rsa.pub ]]; then
     rake secrets:install
   else
