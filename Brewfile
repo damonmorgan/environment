@@ -65,7 +65,6 @@ brew 'forego'
 brew 'heroku'
 
 # editor
-brew 'vim'
 brew 'macvim'
 
 # development font
