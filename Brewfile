@@ -65,7 +65,7 @@ brew 'forego'
 brew 'heroku'
 
 # editor
-brew 'vim', args: ['with-override-system-vi']
+brew 'vim'
 brew 'macvim'
 
 # development font
