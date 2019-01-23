@@ -62,7 +62,7 @@ brew 'terminal-notifier'
 brew 'forego'
 
 # heroku
-brew 'heroku'
+brew 'heroku/brew/heroku'
 
 # editor
 brew 'macvim'
@@ -77,7 +77,7 @@ cask 'google-chrome-dev'
 cask 'opera'
 cask 'opera-developer'
 cask 'firefox'
-cask 'firefoxdeveloperedition'
+cask 'firefox-developer-edition'
 
 # apps
 cask 'virtualbox'
