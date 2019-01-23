@@ -100,8 +100,8 @@ cask 'vanilla'
 
 # drives
 cask 'dropbox'
-cask 'google-drive'
-cask 'amazon-drive'
+#cask 'google-drive-file-stream'
+#cask 'amazon-photos'
 
 # docker for mac
 cask 'docker'
