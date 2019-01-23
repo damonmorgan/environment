@@ -4,7 +4,6 @@
 # brew cask for apps
 tap 'caskroom/cask'
 tap 'caskroom/versions'
-tap 'heroku/brew'
 
 # mac app store
 brew 'mas'
