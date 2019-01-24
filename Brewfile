@@ -25,7 +25,7 @@ brew 'zsh-completions'
 cask 'iterm2'
 
 # git
-brew 'git', args: ['without-completions']
+brew 'git'
 brew 'git-extras'
 cask 'gitup'
 
@@ -45,7 +45,7 @@ brew 'scala'
 brew 'elixir'
 
 # database client tools and libs
-brew 'postgresql', args: ['no-python']
+brew 'postgresql'
 brew 'redis'
 brew 'rabbitmq'
 brew 'memcached'
@@ -55,7 +55,7 @@ brew 'coreutils'
 brew 'ripgrep'
 brew 'fasd'
 brew 'wget'
-brew 'curl', args: ['with-nghttp2']
+#brew 'curl'
 brew 'ccat'
 brew 'awscli'
 brew 'terminal-notifier'
