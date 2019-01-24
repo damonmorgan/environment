@@ -54,7 +54,7 @@ echo "update homebrew apps"
   brew cleanup
   brew prune
 
-if [[ -z $(which zsh | grep '/usr/local/bin/zsh') ]]; then
+if [[ -z $(sudo cat /etc/shells | grep $(which zsh)) ]]; then
   echo "add homebrew zsh to shells"
   sudo sh -c "echo $(which zsh) >> /etc/shells"
 fi
