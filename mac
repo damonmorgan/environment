@@ -76,6 +76,10 @@ echo "checking for SSH key, try to restore from secrets if it doesn't exist..."
   wget -nv https://raw.githubusercontent.com/damonmorgan/environment/master/secrets/secrets.rake -O $HOME/macenv/secrets/secrets.rake
   cd $HOME/macenv
   if [[ ! -f $HOME/.ssh/id_rsa.pub ]]; then
+    # it's likely that both history files have been recently created as part of the install process, but we want to
+    # overwrite them with the backed up versions that will have an 'older' timestamp
+    rm $HOME/.psql_history
+    rm $HOME/.zsh_history
     rake secrets:install
   else
     rake secrets:backup
