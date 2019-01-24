@@ -19,7 +19,11 @@ FILES = {
   "wireguard" => {
     local: "/usr/local/etc/wireguard",
     globs: %w[**/* **/.*]
-  }
+  },
+  "history" => {
+    local: "~/",
+    globs: %w[.psql_history .zsh_history]
+  },
 }
 
 ICLOUD_DRIVE = "#{ENV['HOME']}/Library/Mobile Documents/com~apple~CloudDocs".freeze
