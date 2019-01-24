@@ -14,7 +14,7 @@ fi
 echo "checking for app store updates"
 if [[ -z $(softwareupdate -l 2>&1 | grep "No new software available.") ]]; then
   echo "Installing software updates:"
-  sudo softwareupdate --install --all
+  sudo softwareupdate --install --all --restart
   #has xcode been updated?
   if [[ -z $(/usr/bin/xcrun clang 2>&1 | grep "no input files") ]]; then
     sudo xcodebuild -license
@@ -50,7 +50,6 @@ echo "update homebrew apps"
   wget -nv https://raw.githubusercontent.com/damonmorgan/environment/master/Brewfile -O $HOME/macenv/Brewfile
   cd $HOME/macenv
   brew bundle --verbose
-  brew link curl --force
   # Remove outdated versions from the cellar
   brew cleanup
   brew prune
