@@ -52,9 +52,8 @@ echo "update homebrew apps"
   brew bundle --verbose
   # Remove outdated versions from the cellar
   brew cleanup
-  brew prune
 
-if [[ -z $(sudo cat /etc/shells | grep $(which zsh)) ]]; then
+if [ $SHELL != $(which zsh) ] && [[ -z $(sudo cat /etc/shells | grep $(which zsh)) ]]; then
   echo "add homebrew zsh to shells"
   sudo sh -c "echo $(which zsh) >> /etc/shells"
 fi
