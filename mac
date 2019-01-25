@@ -137,7 +137,7 @@ echo "vim Vundle"
     vundle-update
   fi
 
-if [[ ! -f $HOME/.vim/bundle/command-t/ruby/command-t/metadata.rb ]]; then
+if [[ ! -f $HOME/.vim/bundle/command-t/ruby/command-t/ext/metadata.rb ]]; then
   echo "build Command-T plugin"
   cd $HOME/.vim/bundle/command-t
   rake make
