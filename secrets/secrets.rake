@@ -24,6 +24,10 @@ FILES = {
     local: "~/",
     globs: %w[.psql_history .zsh_history]
   },
+  "transmission" => {
+    local: "~/.config/Transmission Remote GUI",
+    globs: %w[transgui.ini]
+  },
 }
 
 ICLOUD_DRIVE = "#{ENV['HOME']}/Library/Mobile Documents/com~apple~CloudDocs".freeze
