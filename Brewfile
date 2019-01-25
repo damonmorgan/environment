@@ -7,8 +7,10 @@ tap 'caskroom/versions'
 
 # mac app store
 brew 'mas'
-mas 'XCode', id: 497799835
+mas 'Xcode', id: 497799835
 mas 'OneDrive', id: 823766827
+#mas 'Microsoft Word', id: 1111
+#mas 'Microsoft Excel', id: 2222
 
 # replace default openssl
 brew 'openssl'
@@ -93,7 +95,6 @@ cask 'transmission-remote-gui'
 cask 'cyberduck'
 cask 'android-file-transfer'
 #cask 'gimp'
-#cask 'microsoft-office365'
 #cask 'steam'
 #cask 'ngrok'
 cask 'vanilla'
