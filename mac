@@ -184,7 +184,7 @@ echo "latest ruby"
     gem update bundler
     gem clean
   else
-    ruby-install "ruby $ruby_latest_version" --disable-install-rdoc
+    ruby-install "ruby $ruby_latest_version" -- --disable-install-rdoc
     rm -rf $HOME/src
     rm -rf $HOME/.rubies/ruby-$ruby_current_version
     rm -rf $HOME/.gem/ruby/$ruby_current_version
