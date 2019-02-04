@@ -191,6 +191,7 @@ echo "latest ruby"
     echo "$ruby_latest_version" > .ruby-version
     source $(brew --prefix chruby)/share/chruby/chruby.sh
     source $(brew --prefix chruby)/share/chruby/auto.sh
+    cd $HOME
     cd $HOME/development
     gem update --system --no-document
     gem clean
