@@ -193,6 +193,7 @@ echo "latest ruby"
     source $(brew --prefix chruby)/share/chruby/auto.sh
     cd $HOME
     cd $HOME/development
+    chruby "$ruby_latest_version"
     gem update --system --no-document
     gem clean
     gem install bundler --no-document
