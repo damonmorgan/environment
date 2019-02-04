@@ -1,14 +1,11 @@
 # Install command-line tools using Homebrew
 # Usage: `brew bundle`
 
-# brew cask for apps
-tap 'caskroom/cask'
-tap 'caskroom/versions'
-
 # mac app store
 brew 'mas'
 mas 'Xcode', id: 497799835
 mas 'OneDrive', id: 823766827
+mas 'iMovie', id: 408981434
 #mas 'Microsoft Word', id: 1111
 #mas 'Microsoft Excel', id: 2222
 
@@ -70,11 +67,12 @@ brew 'heroku/brew/heroku'
 brew 'macvim'
 
 # development font
-tap 'caskroom/fonts'
+tap 'homebrew/cask-fonts'
 cask 'font-inconsolata'
 cask 'font-inconsolata-for-powerline'
 
 # browsers
+tap 'homebrew/cask-versions'
 cask 'google-chrome-dev'
 cask 'opera'
 cask 'opera-developer'
