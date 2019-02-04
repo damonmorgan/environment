@@ -180,7 +180,7 @@ echo "latest ruby"
   ruby_current_version="$(cat .ruby-version)"
   if [[ $ruby_latest_version = $ruby_current_version ]]; then
     echo "Latest ruby installed - Updating rubygems"
-    gem update --system
+    gem update --system --no-document
     gem update bundler
     gem clean
   else
@@ -192,7 +192,7 @@ echo "latest ruby"
     source $(brew --prefix chruby)/share/chruby/chruby.sh
     source $(brew --prefix chruby)/share/chruby/auto.sh
     cd $HOME/development
-    gem update --system
+    gem update --system --no-document
     gem clean
     gem install bundler --no-document
   fi
