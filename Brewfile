@@ -61,7 +61,8 @@ brew 'terminal-notifier'
 brew 'forego'
 
 # heroku
-brew 'heroku/brew/heroku'
+tap 'heroku/brew'
+brew 'heroku'
 
 # editor
 brew 'macvim'
