@@ -15,20 +15,10 @@ echo "checking for app store updates"
 if [[ -z $(softwareupdate -l 2>&1 | grep "No new software available.") ]]; then
   echo "Installing software updates:"
   sudo softwareupdate --install --all --restart
-  #has xcode been updated?
-  if [[ -z $(/usr/bin/xcrun clang 2>&1 | grep "no input files") ]]; then
+  #has xcode been updated and we need to reaccept the license?
+  if [[ -n $(/usr/bin/xcrun clang 2>&1 | grep "license") ]]; then
     sudo xcodebuild -license
   fi
-fi
-
-if [[ -z $(which xcodebuild) ]]; then
-  echo "install xcode command line tools"
-  #do we need to accept the xcode license?
-  if [[ -z $(/usr/bin/xcrun clang 2>&1 | grep "no input files") ]]; then
-    sudo xcodebuild -license
-  fi
-  xcode-select --install
-  read -p "Press any key to continue... " -n1 -s
 fi
 
 if [[ -z $(which brew) ]]; then
