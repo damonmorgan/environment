@@ -15,6 +15,8 @@ echo "checking for app store updates"
 if [[ -z $(softwareupdate -l 2>&1 | grep "No new software available.") ]]; then
   echo "Installing software updates:"
   sudo softwareupdate --install --all --restart
+  #wait to confirm a restart wasn't needed
+  read -p "Press any key to continue... " -n1 -s
   #has xcode been updated and we need to reaccept the license?
   if [[ -n $(/usr/bin/xcrun clang 2>&1 | grep "license") ]]; then
     sudo xcodebuild -license
