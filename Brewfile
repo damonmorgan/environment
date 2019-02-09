@@ -6,8 +6,10 @@ brew 'mas'
 mas 'Xcode', id: 497799835
 mas 'OneDrive', id: 823766827
 mas 'iMovie', id: 408981434
-#mas 'Microsoft Word', id: 1111
-#mas 'Microsoft Excel', id: 2222
+mas 'Keynote', id: 409183694
+mas 'Microsoft Word', id: 462054704
+mas 'Microsoft Excel', id: 462058435
+mas 'Microsoft Powerpoint', id: 462062816
 
 # replace default openssl
 brew 'openssl'
