@@ -4,6 +4,7 @@
 # mac app store
 brew 'mas'
 mas 'Xcode', id: 497799835
+mas 'WireGuard', id: 1451685025
 mas 'OneDrive', id: 823766827
 mas 'iMovie', id: 408981434
 mas 'Keynote', id: 409183694
