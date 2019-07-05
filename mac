@@ -50,6 +50,12 @@ if [ $SHELL != $(which zsh) ] && [[ -z $(sudo cat /etc/shells | grep $(which zsh
   sudo sh -c "echo $(which zsh) >> /etc/shells"
 fi
 
+if [[ ! -f $HOME/.fzf.zsh ]]; then
+  cd $HOME
+  echo "install fzf completions and key bindings"
+  $(brew --prefix)/opt/fzf/install
+fi
+
 if [[ -z $(pgrep -x Docker) ]]; then
   echo "docker containers"
   open -a Docker
