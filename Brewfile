@@ -63,6 +63,7 @@ brew 'ccat'
 brew 'awscli'
 brew 'terminal-notifier'
 brew 'forego'
+brew 'jq'
 
 # heroku
 tap 'heroku/brew'
