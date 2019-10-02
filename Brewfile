@@ -48,6 +48,7 @@ cask 'java'
 brew 'go'
 brew 'scala'
 brew 'elixir'
+brew 'terraform'
 
 # database client tools and libs
 brew 'postgresql'
