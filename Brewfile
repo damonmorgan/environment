@@ -30,6 +30,7 @@ cask 'iterm2'
 brew 'git'
 brew 'git-extras'
 cask 'gitup'
+brew 'git-crypt'
 
 ## development languages
 # ruby with version manager
