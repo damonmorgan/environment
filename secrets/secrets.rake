@@ -16,6 +16,10 @@ FILES = {
     local: "~/.aws",
     globs: "*"
   },
+  "pgp" => {
+    local: "~/.gnupg",
+    globs: "*"
+  },
   "wireguard" => {
     local: "/usr/local/etc/wireguard",
     globs: %w[**/* **/.*]
