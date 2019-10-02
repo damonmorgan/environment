@@ -31,6 +31,7 @@ brew 'git'
 brew 'git-extras'
 cask 'gitup'
 brew 'git-crypt'
+cask 'keybase'
 
 ## development languages
 # ruby with version manager
