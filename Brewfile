@@ -32,6 +32,7 @@ brew 'git-extras'
 cask 'gitup'
 brew 'git-crypt'
 cask 'keybase'
+brew 'gpg'
 
 ## development languages
 # ruby with version manager
