@@ -88,6 +88,7 @@ cask 'opera'
 cask 'opera-developer'
 cask 'firefox'
 cask 'firefox-developer-edition'
+cask 'microsoft-edge'
 
 # apps
 cask 'virtualbox'
