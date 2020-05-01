@@ -5,12 +5,13 @@
 brew 'mas'
 mas 'Xcode', id: 497799835
 mas 'WireGuard', id: 1451685025
-#mas 'OneDrive', id: 823766827
+mas 'OneDrive', id: 823766827
 mas 'iMovie', id: 408981434
 mas 'Keynote', id: 409183694
 #mas 'Microsoft Word', id: 462054704
 #mas 'Microsoft Excel', id: 462058435
 #mas 'Microsoft Powerpoint', id: 462062816
+mas 'Slack', id: 803453959
 
 # replace default openssl
 brew 'openssl'
@@ -101,6 +102,7 @@ cask 'skype'
 cask 'spotify'
 cask 'transmission-remote-gui'
 #cask 'truecrypt71a' #No available Cask for truecrypt71a - http://apple.stackexchange.com/questions/173879/truecrypt-7-1a-requires-mac-os-x-10-4-or-later-on-yosemite-10-10
+cask 'veracrypt'
 cask 'cyberduck'
 cask 'android-file-transfer'
 #cask 'gimp'
