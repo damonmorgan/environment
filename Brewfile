@@ -109,6 +109,10 @@ cask 'android-file-transfer'
 #cask 'steam'
 #cask 'ngrok'
 cask 'vanilla'
+cask 'authy'
+
+tap 'homebrew/cask-drivers'
+cask 'bose-updater'
 
 # drives
 cask 'dropbox'
