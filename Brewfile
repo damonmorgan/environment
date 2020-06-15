@@ -35,6 +35,9 @@ brew 'git-crypt'
 cask 'keybase'
 brew 'gpg'
 
+#svn
+brew 'svn'
+
 ## development languages
 # ruby with version manager
 brew 'chruby'
