@@ -113,6 +113,7 @@ cask 'android-file-transfer'
 #cask 'ngrok'
 cask 'vanilla'
 cask 'authy'
+cask 'monitorcontrol'
 
 tap 'homebrew/cask-drivers'
 cask 'bose-updater'
