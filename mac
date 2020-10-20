@@ -344,7 +344,7 @@ echo "Disable local Time Machine backups"
 # list casks that are outdated
 echo ""
 echo "####################### Outdated Casks ######################"
-brew cask outdated
+brew outdated --cask
 echo "#############################################################"
 echo ""
 
