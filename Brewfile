@@ -47,7 +47,6 @@ brew 'node'
 brew 'yarn'
 # other
 brew 'python'
-brew 'python@2'
 cask 'java'
 brew 'go'
 brew 'scala'

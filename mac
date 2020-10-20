@@ -84,7 +84,7 @@ echo "checking for SSH key, generating one if it doesn't exist and add to github
     read -p "Press any key once you have pasted into your Github account..." -n1 -s
   fi
 
-if [[ -z $(brew cask list | grep 'prey') ]]; then
+if [[ -z $(brew list --cask | grep 'prey') ]]; then
   echo "install prey"
   open https://panel.preyproject.com/settings
   echo "Type your prey apikey found on your profile page, followed by [ENTER]:"
