@@ -115,6 +115,7 @@ cask 'android-file-transfer'
 #cask 'vanilla'
 cask 'authy'
 #cask 'monitorcontrol'
+#cask 'camo-studio'
 cask 'whatsapp'
 
 tap 'homebrew/cask-drivers'
