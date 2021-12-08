@@ -12,6 +12,7 @@ mas 'Keynote', id: 409183694
 #mas 'Microsoft Excel', id: 462058435
 #mas 'Microsoft Powerpoint', id: 462062816
 mas 'Slack', id: 803453959
+mas 'WhatsApp', id: 1147396723
 
 # replace default openssl
 brew 'openssl'
@@ -119,7 +120,6 @@ cask 'authy'
 #cask 'monitorcontrol'
 #cask 'camo-studio'
 cask 'drawio'
-cask 'whatsapp'
 
 tap 'homebrew/cask-drivers'
 cask 'bose-updater'
