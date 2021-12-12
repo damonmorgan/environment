@@ -191,17 +191,17 @@ echo "latest ruby"
     gem install bundler --no-document
   fi
 
-if [[ -z $(pgrep -x Flux) ]]; then
-  echo "opening apps for configuration"
-  open -a Flux
-  read -p "Press any key to continue... " -n1 -s
-fi
+#if [[ -z $(pgrep -x Flux) ]]; then
+  #echo "opening apps for configuration"
+  #open -a Flux
+  #read -p "Press any key to continue... " -n1 -s
+#fi
 
-if [[ -z $(pgrep -x Vanilla) ]]; then
-  echo "opening apps for configuration"
-  open -a Vanilla
-  read -p "Press any key to continue... " -n1 -s
-fi
+#if [[ -z $(pgrep -x Vanilla) ]]; then
+  #echo "opening apps for configuration"
+  #open -a Vanilla
+  #read -p "Press any key to continue... " -n1 -s
+#fi
 
 echo "set macos preferences"
 # from ~/.osx — http://mths.be/osx
