@@ -234,13 +234,13 @@ echo "Disable Photos.app from starting everytime a device is plugged in"
 defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
 
 echo "Show battery % in menu bar"
-defaults write com.apple.menuextra.battery ShowPercent -bool true
+# defaults write com.apple.menuextra.battery ShowPercent -bool true
 
 echo "Show date in menu bar"
 # defaults write com.apple.menuextra.clock "DateFormat" "EEE d MMM  HH:mm"
 
 echo "show bluetooth in menu bar"
-defaults write com.apple.systemuiserver menuExtras -array "/System/Library/CoreServices/Menu Extras/Displays.menu" "/System/Library/CoreServices/Menu Extras/Bluetooth.menu" "/System/Library/CoreServices/Menu Extras/AirPort.menu" "/System/Library/CoreServices/Menu Extras/Battery.menu" "/System/Library/CoreServices/Menu Extras/Clock.menu"
+# defaults write com.apple.systemuiserver menuExtras -array "/System/Library/CoreServices/Menu Extras/Displays.menu" "/System/Library/CoreServices/Menu Extras/Bluetooth.menu" "/System/Library/CoreServices/Menu Extras/AirPort.menu" "/System/Library/CoreServices/Menu Extras/Battery.menu" "/System/Library/CoreServices/Menu Extras/Clock.menu"
 
 ###############################################################################
 # Mouse and trackpad                                                          #
