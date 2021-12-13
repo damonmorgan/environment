@@ -114,11 +114,11 @@ echo "fix permissions for zsh completions"
   rm -f $HOME/.zcompdump*; compinit
 
 echo "heroku plugins"
-  if [[ -z $(/usr/local/bin/heroku plugins | grep 'heroku-pg-extras') ]]; then
-    /usr/local/bin/heroku plugins:install heroku-pg-extras
+  if [[ -z $(/opt/homebrew/bin/heroku plugins | grep 'heroku-pg-extras') ]]; then
+    /opt/homebrew/bin/heroku plugins:install heroku-pg-extras
     heroku autocomplete
   else
-    /usr/local/bin/heroku update
+    /opt/homebrew/bin/heroku update
   fi
 
 echo "vim Vundle"
