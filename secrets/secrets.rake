@@ -20,10 +20,6 @@ FILES = {
     local: "~/.gnupg",
     globs: "*"
   },
-  "wireguard" => {
-    local: "/usr/local/etc/wireguard",
-    globs: %w[**/* **/.*]
-  },
   "history" => {
     local: "~/",
     globs: %w[.psql_history .zsh_history]
