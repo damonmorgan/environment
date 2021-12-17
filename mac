@@ -11,6 +11,11 @@ if [[ -z $(networksetup -getdnsservers Wi-Fi 2>&1 | grep "1.0.0.1") ]]; then
   sudo killall -HUP mDNSResponder
 fi
 
+echo "fix nfs"
+if [[ -z $(sudo cat /etc/nfs.conf | grep 'vers') ]]; then
+  sudo -- zsh -c 'echo  "nfs.client.mount.options = vers=4" >> /etc/nfs.conf'
+fi
+
 echo "checking for app store updates"
 if [[ -z $(softwareupdate -l 2>&1 | grep "No new software available.") ]]; then
   echo "Installing software updates:"
