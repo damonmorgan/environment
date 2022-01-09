@@ -35,7 +35,7 @@ services:
       - pgdata:/var/lib/postgresql/data
     environment:
       POSTGRES_USER: ${USER}
-      POSTGRES_PASSWORD:
+      POSTGRES_PASSWORD: password
     restart: unless-stopped
 
 volumes:
