@@ -55,10 +55,11 @@ if [ $SHELL != $(which zsh) ] && [[ -z $(sudo cat /etc/shells | grep $(which zsh
   sudo sh -c "echo $(which zsh) >> /etc/shells"
 fi
 
-if [[ -z $(pgrep -x Docker) ]]; then
+if [[ -z $(pgrep -f colima) ]]; then
   echo "docker containers"
-  open -a Docker
-  read -p "Press any key to continue... " -n1 -s
+  mkdir -p ~/.docker/cli-plugins
+  ln -sfn /opt/homebrew/opt/docker-compose/bin/docker-compose ~/.docker/cli-plugins/docker-compose
+  colima start
 fi
 wget -nv https://raw.githubusercontent.com/damonmorgan/environment/master/docker-compose.yml -O $HOME/macenv/docker-compose.yml
 cd $HOME/macenv

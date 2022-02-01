@@ -130,4 +130,6 @@ cask 'dropbox'
 #cask 'amazon-photos'
 
 # docker for mac
-cask 'docker'
+brew 'docker'
+brew 'docker-compose'
+brew 'colima'
