@@ -149,7 +149,7 @@ fi
 
 if [[ ! -d $HOME/development/snipmate-snippets ]]; then
   echo "install snippets"
-  git clone git://github.com/scrooloose/snipmate-snippets.git $HOME/development/snipmate-snippets
+  git clone https://github.com/scrooloose/snipmate-snippets.git $HOME/development/snipmate-snippets
   sed -i -e 's/snipmate/snipmate.vim/g' $HOME/development/snipmate-snippets/Rakefile
   cd $HOME/development/snipmate-snippets
   rake deploy_local
@@ -157,7 +157,7 @@ fi
 
 if [[ ! -d $HOME/development/solarized ]]; then
   echo "better colour scheme for terminals"
-  git clone git://github.com/altercation/solarized.git $HOME/development/solarized
+  git clone https://github.com/altercation/solarized.git $HOME/development/solarized
   open "$HOME/development/solarized/iterm2-colors-solarized/Solarized Dark.itermcolors"
   read -p "Press any key to continue... " -n1 -s
 fi
