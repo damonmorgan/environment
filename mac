@@ -49,6 +49,7 @@ echo "update homebrew apps"
   brew bundle --verbose
   # Remove outdated versions from the cellar
   brew cleanup
+  brew link --force libpq
 
 if [ $SHELL != $(which zsh) ] && [[ -z $(sudo cat /etc/shells | grep $(which zsh)) ]]; then
   echo "add homebrew zsh to shells"

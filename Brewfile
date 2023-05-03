@@ -55,7 +55,7 @@ brew 'elixir'
 brew 'terraform'
 
 # database client tools and libs
-brew 'postgresql@15'
+brew 'libpq'
 brew 'redis'
 brew 'rabbitmq'
 brew 'memcached'
