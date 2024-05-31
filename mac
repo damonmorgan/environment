@@ -17,7 +17,7 @@ if [[ -z $(sudo cat /etc/nfs.conf | grep 'vers') ]]; then
 fi
 
 echo "checking for app store updates"
-if [[ -z $(softwareupdate -l 2>&1 | grep "No new software available.") ]]; then
+if [ "$SKIP_SOFTWARE_UPDATE" != "true" ] && [[ -z $(softwareupdate -l 2>&1 | grep "No new software available.") ]]; then
   echo "Installing software updates:"
   sudo softwareupdate --install --all --restart
   #wait to confirm a restart wasn't needed
