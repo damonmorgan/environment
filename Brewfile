@@ -52,7 +52,7 @@ brew 'python'
 brew 'go'
 brew 'scala'
 brew 'elixir'
-brew 'terraform'
+#brew 'terraform'
 
 # database client tools and libs
 brew 'libpq'
@@ -63,7 +63,7 @@ brew 'redis'
 # utils
 brew 'coreutils'
 brew 'ripgrep'
-brew 'fasd'
+#brew 'fasd'
 brew 'fzf'
 brew 'wget'
 #brew 'curl'
@@ -81,12 +81,12 @@ brew 'heroku'
 brew 'macvim'
 
 # development font
-tap 'homebrew/cask-fonts'
+#tap 'homebrew/cask-fonts'
 cask 'font-inconsolata'
 cask 'font-inconsolata-for-powerline'
 
 # browsers
-tap 'homebrew/cask-versions'
+#tap 'homebrew/cask-versions'
 cask 'google-chrome-dev'
 cask 'opera'
 cask 'opera-developer'
@@ -106,7 +106,7 @@ cask 'zoom'
 cask 'calibre'
 #cask 'flux'
 cask 'spotify'
-cask 'transmission-remote-gui'
+#cask 'transmission-remote-gui'
 #cask 'truecrypt71a' #No available Cask for truecrypt71a - http://apple.stackexchange.com/questions/173879/truecrypt-7-1a-requires-mac-os-x-10-4-or-later-on-yosemite-10-10
 cask 'veracrypt'
 #cask 'cyberduck'
@@ -119,7 +119,7 @@ cask 'android-file-transfer'
 #cask 'camo-studio'
 cask 'drawio'
 
-tap 'homebrew/cask-drivers'
+#tap 'homebrew/cask-drivers'
 cask 'bose-updater'
 
 # drives
