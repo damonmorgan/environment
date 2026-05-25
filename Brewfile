@@ -31,7 +31,7 @@ cask 'iterm2'
 # git
 brew 'git'
 brew 'git-extras'
-cask 'gitup'
+cask 'gitup-app'
 brew 'git-crypt'
 cask 'keybase'
 brew 'gpg'
@@ -87,11 +87,10 @@ cask 'font-inconsolata-for-powerline'
 
 # browsers
 #tap 'homebrew/cask-versions'
-cask 'google-chrome-dev'
+cask 'google-chrome@dev'
 cask 'opera'
-cask 'opera-developer'
 cask 'firefox'
-cask 'firefox-developer-edition'
+cask 'firefox@developer-edition'
 cask 'microsoft-edge'
 
 # apps
