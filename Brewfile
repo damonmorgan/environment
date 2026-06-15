@@ -32,12 +32,12 @@ cask 'iterm2'
 brew 'git'
 brew 'git-extras'
 cask 'gitup-app'
-brew 'git-crypt'
-cask 'keybase'
-brew 'gpg'
+#brew 'git-crypt'
+#cask 'keybase'
+#brew 'gpg'
 
 #svn
-brew 'svn'
+#brew 'svn'
 
 ## development languages
 # ruby with version manager
@@ -45,13 +45,13 @@ brew 'chruby'
 brew 'ruby-install'
 # node
 brew 'node'
-brew 'yarn'
+#brew 'yarn'
 # other
 brew 'python'
 # cask 'java'
 brew 'go'
-brew 'scala'
-brew 'elixir'
+#brew 'scala'
+#brew 'elixir'
 #brew 'terraform'
 
 # database client tools and libs
@@ -74,19 +74,16 @@ brew 'forego'
 brew 'jq'
 
 # heroku
-tap 'heroku/brew'
-brew 'heroku'
+brew 'heroku/brew/heroku'
 
 # editor
 brew 'macvim'
 
 # development font
-#tap 'homebrew/cask-fonts'
 cask 'font-inconsolata'
 cask 'font-inconsolata-for-powerline'
 
 # browsers
-#tap 'homebrew/cask-versions'
 cask 'google-chrome@dev'
 cask 'opera'
 cask 'firefox'
@@ -118,7 +115,6 @@ cask 'android-file-transfer'
 #cask 'camo-studio'
 cask 'drawio'
 
-#tap 'homebrew/cask-drivers'
 cask 'bose-updater'
 
 # drives
